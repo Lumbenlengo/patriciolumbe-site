@@ -826,7 +826,7 @@ footer {
   50%       { opacity: 0.7; box-shadow: 0 0 0 6px rgba(5, 150, 105, 0); }
 }
 
-/* ── SCROLL REVEAL ANIMATIONS ── */
+
 .fade-up {
   opacity: 0;
   transform: translateY(28px);
@@ -852,7 +852,7 @@ footer {
   transform: translate(0);
 }
 
-/* ── RESPONSIVE — MOBILE ── */
+
 @media (max-width: 900px) {
   nav { padding: 16px 20px; }
   .nav-links { display: none; }
@@ -871,4 +871,22 @@ footer {
   .projects-grid { grid-template-columns: 1fr; }
 
   footer { flex-direction: column; gap: 12px; text-align: center; padding: 24px 20px; }
+}
+
+
+.skills-cloud img {
+    height: 28px; 
+    transition: transform 0.2s;
+}
+
+.skills-cloud img:hover {
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 900px) {
+    .project-showcase, .study-card {
+        grid-template-columns: 1fr !important;
+        padding: 20px !important;
+    }
 }

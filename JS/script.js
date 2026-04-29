@@ -6,11 +6,11 @@
 
 console.log('%c Welcome to Patricio\'s Infrastructure Lab 🚀', 'color:#2563eb;font-weight:bold;font-size:14px;');
 
-/* ── CUSTOM HAND CURSOR ──────────────────────────────────────
+/*  CUSTOM HAND CURSOR 
    Replaces the default OS cursor with an SVG hand on desktop.
    Changes colour to purple when hovering over interactive elements.
    Hidden on mobile via CSS (max-width: 900px).
-   ─────────────────────────────────────────────────────────── */
+   */
 const cursor = document.getElementById('cursor');
 
 document.addEventListener('mousemove', e => {
@@ -31,14 +31,14 @@ document.querySelectorAll('a, button').forEach(el => {
 });
 
 
-/* ── SCROLL REVEAL ANIMATIONS ────────────────────────────────
+/* SCROLL REVEAL ANIMATIONS 
    Uses IntersectionObserver to trigger CSS transitions when
    elements enter the viewport. Three animation directions:
      .fade-up      → slides up from below
      .reveal-left  → slides in from the left
      .reveal-right → slides in from the right
    Once visible, the 'visible' class is added and stays.
-   ─────────────────────────────────────────────────────────── */
+    */
 const scrollObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -52,19 +52,19 @@ document.querySelectorAll('.fade-up, .reveal-left, .reveal-right').forEach(el =>
 });
 
 
-/* ── STAGGERED SERVICE CARDS ─────────────────────────────────
+/* STAGGERED SERVICE CARDS 
    Each service card gets a slightly longer transition delay
    than the previous one, creating a cascade reveal effect.
-   ─────────────────────────────────────────────────────────── */
+   */
 document.querySelectorAll('.service-card').forEach((card, index) => {
   card.style.transitionDelay = (index * 0.08) + 's';
 });
 
 
-/* ── STICKY NAV ON SCROLL ────────────────────────────────────
+/*  STICKY NAV ON SCROLL 
    Adds a frosted-glass background + border shadow to the nav
    after the user scrolls past 60px from the top.
-   ─────────────────────────────────────────────────────────── */
+    */
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
@@ -80,14 +80,14 @@ window.addEventListener('scroll', () => {
 });
 
 
-/* ── TERMINAL TYPING EFFECT ──────────────────────────────────
+/* TERMINAL TYPING EFFECT 
    Simulates a real terminal by typing the terraform command
    character by character. After completion, a blinking block
    cursor (▊) is appended to indicate the shell is ready.
 
    p1 = the command name and flag
    p2 = the argument (different colour via .arg CSS class)
-   ─────────────────────────────────────────────────────────── */
+   */
 const termCmd  = document.getElementById('t-cmd');
 const termArg  = document.getElementById('t-arg');
 const p1       = 'terraform apply ';
