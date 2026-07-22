@@ -48,6 +48,9 @@
 </head>
 <body>
 
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
   <a class="skip-link" href="#main">Skip to content</a>
 
   <div class="grid-bg" aria-hidden="true"></div>
@@ -67,7 +70,8 @@
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#work">Work</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#case-studies">Case Studies</a></li>
           <li><a href="#architecture">Architecture</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -91,9 +95,9 @@
           <p class="hero-role">AWS Cloud Architect &amp; DevOps Engineer</p>
 
           <p class="hero-pitch">
-            I turn manual, fragile setups into AWS infrastructure that deploys itself —
-            defined in Terraform, shipped through GitHub Actions, and locked down with
-            least-privilege IAM.
+            I build AWS infrastructure the way I'd want to inherit it: defined in
+            Terraform, deployed through GitHub Actions, and locked down enough that
+            one leaked laptop doesn't turn into one leaked AWS account.
           </p>
 
           <ul class="specialties">
@@ -158,14 +162,15 @@
           <h2 class="section-title">I build cloud systems that hold up under <em>load</em> and <em>audit</em>.</h2>
 
           <p class="prose">
-            I specialise in AWS environments that run without babysitting: infrastructure
-            described entirely in Terraform, deployments triggered by a merge to <code>main</code>,
-            and no long-lived credentials anywhere in the pipeline.
+            I got into this through building things that broke — Terraform and Kubernetes
+            side projects where I was both the engineer and the 3am on-call. That's where
+            the AWS Solutions Architect and Cloud Practitioner certifications came from:
+            not a checklist, but a way of proving the habits actually held up.
           </p>
           <p class="prose">
-            Based in Portugal, working remotely with teams across Europe and beyond.
-            I speak Portuguese, English and French — useful when the architecture review
-            and the stakeholder meeting happen in different languages.
+            Based in Portugal, open to remote work with teams anywhere. I speak Portuguese,
+            English and French, which comes in handy more often than you'd expect —
+            architecture reviews and client calls don't always happen in the same language.
           </p>
 
           <dl class="stats">
@@ -234,19 +239,25 @@
     </section>
 
     <!-- ── SERVICES ───────────────────────────────────────── -->
+   
     <section id="services" class="section section-alt">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">What I do</p>
           <h2 class="section-title">Where teams usually bring me in</h2>
           <p class="prose section-lede">
-            Six problems I solve most often. Every engagement ends with the infrastructure
-            in code and the deployment path documented — nothing lives only in my head.
+            Six problems I solve most often — for companies hiring full-time and for
+            clients bringing me on as a freelancer. Watch the short walkthrough on any
+            card to see the work, not just a description of it.
           </p>
         </div>
 
         <ul class="services-grid">
           <li class="service-card reveal">
+            <a class="video-thumb video-thumb-pending" href="#" aria-disabled="true" tabindex="-1">
+              <span class="video-play" aria-hidden="true">▶</span>
+              <span class="video-label">Video coming soon</span>
+            </a>
             <h3 class="service-title">Cloud infrastructure design</h3>
             <p class="service-desc">
               Multi-AZ VPCs, load balancing and auto-scaling designed for the traffic you
@@ -256,6 +267,10 @@
           </li>
 
           <li class="service-card reveal">
+            <a class="video-thumb video-thumb-pending" href="#" aria-disabled="true" tabindex="-1">
+              <span class="video-play" aria-hidden="true">▶</span>
+              <span class="video-label">Video coming soon</span>
+            </a>
             <h3 class="service-title">CI/CD pipelines</h3>
             <p class="service-desc">
               Merge to <code>main</code>, ship to production. GitHub Actions authenticating to
@@ -265,6 +280,10 @@
           </li>
 
           <li class="service-card reveal">
+            <a class="video-thumb video-thumb-pending" href="#" aria-disabled="true" tabindex="-1">
+              <span class="video-play" aria-hidden="true">▶</span>
+              <span class="video-label">Video coming soon</span>
+            </a>
             <h3 class="service-title">Infrastructure as code</h3>
             <p class="service-desc">
               Your environment, reproducible from an empty AWS account. Terraform modules with
@@ -274,6 +293,10 @@
           </li>
 
           <li class="service-card reveal">
+            <a class="video-thumb video-thumb-pending" href="#" aria-disabled="true" tabindex="-1">
+              <span class="video-play" aria-hidden="true">▶</span>
+              <span class="video-label">Video coming soon</span>
+            </a>
             <h3 class="service-title">Cloud security review</h3>
             <p class="service-desc">
               Least-privilege IAM, secrets out of source control, WAF in front of what's public.
@@ -283,6 +306,10 @@
           </li>
 
           <li class="service-card reveal">
+            <a class="video-thumb video-thumb-pending" href="#" aria-disabled="true" tabindex="-1">
+              <span class="video-play" aria-hidden="true">▶</span>
+              <span class="video-label">Video coming soon</span>
+            </a>
             <h3 class="service-title">Kubernetes operations</h3>
             <p class="service-desc">
               EKS clusters built to be handed over: sane namespaces, resource limits that mean
@@ -292,6 +319,10 @@
           </li>
 
           <li class="service-card reveal">
+            <a class="video-thumb video-thumb-pending" href="#" aria-disabled="true" tabindex="-1">
+              <span class="video-play" aria-hidden="true">▶</span>
+              <span class="video-label">Video coming soon</span>
+            </a>
             <h3 class="service-title">Observability &amp; SRE</h3>
             <p class="service-desc">
               Dashboards and alerts tied to what users feel, not to CPU graphs nobody reads.
@@ -300,45 +331,77 @@
             <p class="service-meta">CloudWatch · Grafana · Alerting</p>
           </li>
         </ul>
+
+        <p class="section-foot reveal">
+          Freelance or contract engagement? Same list applies —
+          <a class="link-mono" href="mailto:patricio@patriciolumbe.com?subject=Freelance%20project%20enquiry">tell me about the project →</a>
+        </p>
       </div>
     </section>
 
-    <!-- ── WORK ───────────────────────────────────────────── -->
-    <section id="work" class="section">
+    <!-- ── PORTFOLIO ──────────────────────────────────────── -->
+ 
+    <section id="portfolio" class="section">
       <div class="container">
         <div class="section-head reveal">
-          <p class="eyebrow">Selected work</p>
-          <h2 class="section-title">Production-ready AWS infrastructure</h2>
+          <p class="eyebrow">Portfolio</p>
+          <h2 class="section-title">Projects, with the code and a walkthrough</h2>
+          <p class="prose section-lede">
+            Every project links to the real repository. Most also have a short Loom
+            walkthrough and a one-page PDF summary you can download and share internally.
+          </p>
         </div>
 
-        <article class="project reveal">
-          <div class="project-body">
-            <p class="project-kicker">Open source · Terraform</p>
-            <h3 class="project-title">A complete AWS environment, from empty account to running app</h3>
-            <p class="prose">
-              A reference environment I built and maintain: private networking, managed secrets,
-              container workloads and a deployment pipeline that authenticates without static
-              credentials. It's the blueprint I adapt for client projects.
-            </p>
+        <div class="portfolio-grid">
 
-            <ul class="project-points">
-              <li>Multi-AZ VPC with public/private subnet tiers and controlled egress</li>
-              <li>Secrets in AWS Secrets Manager — none in the repository, none in the pipeline</li>
-              <li>GitHub Actions → AWS via OIDC, with a plan/approve step before every apply</li>
-              <li>Everything reproducible: <code>terraform apply</code> rebuilds it from scratch</li>
-            </ul>
-
-            <div class="project-cta">
-              <a class="btn btn-primary" href="https://github.com/Lumbenlengo/production-ready-aws-infrastructure" target="_blank" rel="noopener">Read the repository</a>
-              <a class="link-mono" href="#architecture">How it's put together ↓</a>
+          <article class="portfolio-card reveal">
+            <div class="portfolio-media">
+              <img src="Assets/diagram-preview.jpg" alt="Architecture diagram of the AWS environment: multi-AZ VPC with public and private subnets, load balancer, container workloads and managed secrets." loading="lazy" />
+              <a class="video-thumb video-thumb-overlay video-thumb-pending" href="#" aria-disabled="true" tabindex="-1">
+                <span class="video-play" aria-hidden="true">▶</span>
+                <span class="video-label">Walkthrough coming soon</span>
+              </a>
             </div>
-          </div>
 
-          <figure class="project-figure">
-            <img src="Assets/diagram-preview.jpg" alt="Architecture diagram of the AWS environment: multi-AZ VPC with public and private subnets, load balancer, container workloads and managed secrets." loading="lazy" />
-            <figcaption>Reference architecture — multi-AZ, private by default.</figcaption>
-          </figure>
-        </article>
+            <div class="portfolio-body">
+              <p class="project-kicker">Open source · Terraform</p>
+              <h3 class="project-title">A complete AWS environment, from empty account to running app</h3>
+              <p class="prose">
+                A reference environment I built and maintain: private networking, managed secrets,
+                container workloads and a deployment pipeline that authenticates without static
+                credentials.
+              </p>
+
+              <ul class="chips portfolio-chips">
+                <li class="chip">VPC</li>
+                <li class="chip">Terraform</li>
+                <li class="chip">GitHub Actions</li>
+                <li class="chip">OIDC</li>
+              </ul>
+
+              <div class="portfolio-actions">
+                <a class="btn btn-primary btn-sm" href="https://github.com/Lumbenlengo/production-ready-aws-infrastructure" target="_blank" rel="noopener">View on GitHub</a>
+                <a class="btn btn-ghost btn-sm btn-disabled" href="#" aria-disabled="true" tabindex="-1">Download PDF ↓</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Duplicate this card for each additional GitHub project -->
+          <article class="portfolio-card portfolio-card-placeholder reveal">
+            <div class="portfolio-media portfolio-media-empty">
+              <span class="video-label">Next project — add repo, Loom &amp; PDF</span>
+            </div>
+            <div class="portfolio-body">
+              <p class="project-kicker">Coming soon</p>
+              <h3 class="project-title">Second project slot</h3>
+              <p class="prose">
+                Add the next repository here: short description, tech chips, GitHub link,
+                Loom walkthrough and a downloadable PDF summary.
+              </p>
+            </div>
+          </article>
+
+        </div>
 
         <p class="section-foot reveal">
           More infrastructure, automation and lab projects on
@@ -347,8 +410,64 @@
       </div>
     </section>
 
+    <!-- ── CASE STUDIES ───────────────────────────────────── -->
+   
+    <section id="case-studies" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Case studies</p>
+          <h2 class="section-title">The full story behind selected projects</h2>
+          <p class="prose section-lede">
+            Longer walkthroughs and full write-ups — the problem, the trade-offs, and what
+            changed after. Useful if you're deciding whether to bring me onto a real project.
+          </p>
+        </div>
+
+        <div class="case-study-list">
+
+          <article class="case-study reveal">
+            <div class="case-study-index">01</div>
+            <div class="case-study-media">
+              <a class="video-thumb video-thumb-pending" href="#" aria-disabled="true" tabindex="-1">
+                <span class="video-play" aria-hidden="true">▶</span>
+                <span class="video-label">Deep-dive video coming soon</span>
+              </a>
+            </div>
+            <div class="case-study-body">
+              <h3 class="decision-title">Production-ready AWS environment, end to end</h3>
+              <p class="prose">
+                Full breakdown of the reference architecture: why private-by-default, why
+                OIDC over static keys, and what it costs to run. Includes the failure modes
+                I planned for and how recovery actually works.
+              </p>
+              <div class="case-study-actions">
+                <a class="btn btn-ghost btn-sm btn-disabled" href="#" aria-disabled="true" tabindex="-1">Download full case study (PDF) ↓</a>
+                <a class="link-mono" href="https://github.com/Lumbenlengo/production-ready-aws-infrastructure" target="_blank" rel="noopener">View repository →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Duplicate this article for each additional case study -->
+          <article class="case-study case-study-placeholder reveal">
+            <div class="case-study-index">02</div>
+            <div class="case-study-media case-study-media-empty">
+              <span class="video-label">Next case study</span>
+            </div>
+            <div class="case-study-body">
+              <h3 class="decision-title">Next case study slot</h3>
+              <p class="prose">
+                Add the next deep-dive here once recorded: client context, problem, approach,
+                measurable result, and the PDF write-up.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
     <!-- ── ARCHITECTURE ───────────────────────────────────── -->
-    <section id="architecture" class="section section-alt">
+    <section id="architecture" class="section">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Deep dive</p>
@@ -416,7 +535,7 @@
     </section>
 
     <!-- ── CONTACT ────────────────────────────────────────── -->
-    <section id="contact" class="section">
+    <section id="contact" class="section section-alt">
       <div class="container contact-grid">
         <div class="reveal">
           <p class="eyebrow">Contact</p>

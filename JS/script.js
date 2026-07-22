@@ -1,7 +1,5 @@
-/* ============================================================
-   patriciolumbe.com — main script
-   No dependencies. Everything degrades gracefully without JS.
-   ============================================================ */
+// patriciolumbe.com
+
 
 (function () {
   'use strict';
@@ -129,6 +127,61 @@
           }, 550);
         }
       }, 55);
+    }
+  }
+
+  
+  const hasFinePointer = window.matchMedia('(pointer: fine)').matches;
+
+  if (hasFinePointer) {
+    const dot = document.querySelector('.cursor-dot');
+    const ring = document.querySelector('.cursor-ring');
+
+    if (dot && ring) {
+      document.documentElement.classList.add('has-custom-cursor');
+
+      let ringX = 0, ringY = 0;
+      let targetX = 0, targetY = 0;
+
+      // Ring trails the dot with easing — the "walking" feel.
+      // Reduced motion: snap instantly instead of trailing.
+      const ease = prefersReducedMotion ? 1 : 0.18;
+
+      const render = () => {
+        ringX += (targetX - ringX) * ease;
+        ringY += (targetY - ringY) * ease;
+
+        dot.style.transform = `translate3d(${targetX}px, ${targetY}px, 0)`;
+        ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`;
+
+        requestAnimationFrame(render);
+      };
+
+      window.addEventListener('pointermove', (e) => {
+        targetX = e.clientX;
+        targetY = e.clientY;
+      }, { passive: true });
+
+      // Grow the ring over anything clickable.
+      const hoverTargets = 'a, button, .btn, .chip, .service-card, .portfolio-card, .video-thumb, input, textarea, [role="button"]';
+      document.addEventListener('mouseover', (e) => {
+        if (e.target.closest(hoverTargets)) ring.classList.add('is-hover');
+      });
+      document.addEventListener('mouseout', (e) => {
+        if (e.target.closest(hoverTargets)) ring.classList.remove('is-hover');
+      });
+
+      // Hide when the pointer leaves the window entirely.
+      document.addEventListener('mouseleave', () => {
+        dot.style.opacity = '0';
+        ring.style.opacity = '0';
+      });
+      document.addEventListener('mouseenter', () => {
+        dot.style.opacity = '';
+        ring.style.opacity = '';
+      });
+
+      requestAnimationFrame(render);
     }
   }
 })();
