@@ -1,73 +1,100 @@
 # patriciolumbe.com
 
-Personal portfolio and technical showcase for Patricio Lumbe — Cloud & DevOps Engineer.
+Personal portfolio and technical showcase for **Patricio Lumbe** — AWS Cloud Architect & DevOps Engineer.
 
-Live at: [https://patriciolumbe.com](https://patriciolumbe.com)
-
----
-
-## Overviews
-
-This repository contains the source code for my professional landing page. The project was designed with a Performance-First mindset, focusing on a clean, modern UI without the overhead of heavy frameworks or external dependencies. It showcases my AWS certifications, specialized cloud services, and infrastructure-as-code expertise.
+Live at **[patriciolumbe.com](https://patriciolumbe.com)**
 
 ---
 
-## Tech Stack
+## Overview
+
+The source for my professional landing page. Built with a performance-first mindset: no
+frameworks, no build step, no runtime dependencies. It presents my AWS certifications,
+the services I offer, and the architecture decisions behind my reference infrastructure
+repository.
+
+---
+
+## Tech stack
 
 | Layer | Technology |
 |---|---|
 | Markup | Semantic HTML5 |
-| Styling | Modern CSS3 (Custom Properties, Grid, Flexbox) |
-| Scripting | Vanilla JavaScript (ES6+) |
-| Typography | Inter & JetBrains Mono |
-| Deployment | GitHub Pages with CI/CD integration |
+| Styling | CSS3 — custom properties, Grid, Flexbox |
+| Scripting | Vanilla JavaScript (ES6+), no dependencies |
+| Typography | Inter + JetBrains Mono |
+| Hosting | GitHub Pages, custom domain, enforced HTTPS |
+| Deployment | GitHub Actions (`.github/workflows/deploy.yml`) |
 
 ---
 
-## Project Structure
+## Project structure
 
-[patriciolumbe.com/](https://patriciolumbe.com/)
-├── index.html         # Document structure & SEO metadata
-├── css/
-│   └── style.css      # Design tokens, animations & layout
-├── js/
-│   └── script.js      # Intersection Observer & UI logic
-└── assets/
-    └── patricio.jpg   # Optimized profile assets
-
----
-
-## Key Features
-
-- Performance Optimized: Zero frameworks or build tools for near-instant load times.
-- Infrastructure Simulation: Interactive terminal typing effect animating a terraform apply sequence.
-- Modern UX: Custom interactive SVG cursor, glassmorphism effects, and reveal-on-scroll animations using the Intersection Observer API.
-- Responsive Engineering: Fluid grid system that adapts seamlessly from mobile to ultra-wide displays.
-- AWS Showcase: Specialized certification tracking with real-time status updates (Certified vs. In Progress).
-
----
-
-## Deployment & Automation
-
-- Hosting: Leveraging GitHub Pages for high availability and global edge delivery.
-- SSL/TLS: Automated certificate management with enforced HTTPS.
-- Workflow: Continuous Deployment (CD) pipeline — every commit to main is automatically synchronized with the production domain.
+```text
+patriciolumbe-site/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml     # CI/CD — build + deploy to GitHub Pages on push to main
+├── Assets/
+│   ├── patricio-profile.jpg
+│   ├── diagram-preview.jpg
+│   └── og-preview.jpg     # 1200×630 social share image
+├── CSS/
+│   └── style.css          # Design tokens, layout, components, responsive rules
+├── JS/
+│   └── script.js          # Mobile nav, scroll reveal, scrollspy, terminal effect
+├── CNAME                  # Custom domain for GitHub Pages
+├── index.html             # Structure, SEO metadata, structured data
+└── README.md
+```
 
 ---
 
-## Learning Path & Certifications
+## Key features
 
-- AWS Solutions Architect Associate — Certified
-- AWS Cloud Practitioner — Certified
-- AWS DevOps Engineer Professional — In Progress
-- IBM Full Stack Developer — In Progress
+- **No frameworks, no build tools** — the browser receives exactly what is in this repo.
+- **Terminal signature** — a typed `terraform apply` sequence in the hero, ending in a real
+  apply summary. Skipped entirely when `prefers-reduced-motion` is set.
+- **Accessible by default** — skip link, visible keyboard focus, real mobile navigation,
+  semantic landmarks, descriptive alt text, reduced-motion support.
+- **Discoverable** — Open Graph and Twitter card metadata, canonical URL, and JSON-LD
+  `Person` structured data so shared links render properly.
+- **Responsive** — a single fluid grid system from 320px to ultra-wide.
 
 ---
+
+## Deployment
+
+Every push to `main` triggers the workflow in `.github/workflows/deploy.yml`:
+
+1. Check out the repository
+2. Validate the HTML
+3. Upload the site as a Pages artifact
+4. Deploy to GitHub Pages
+
+The workflow uses OIDC (`id-token: write`) for the Pages deployment — no static
+credentials are stored in this repository. A `concurrency` group ensures two deploys
+never race against production.
+
+### Running locally
+
+```bash
+python3 -m http.server 8000
+# then open http://localhost:8000
+```
+
+---
+
+## Certifications
+
+| Certification | Status |
+|---|---|
+| AWS Solutions Architect – Associate | Certified |
+| AWS Cloud Practitioner | Certified |
+| AWS DevOps Engineer – Professional | In progress — target Q3 2026 |
+
 
 ## Contact
 
-Email: patricio@patriciolumbe.com
-Location: Remote / Global Availability
-
----
-Developed with focus on scalability and clean code.
+**Email:** contact@patriciolumbe.com
+**Location:** France — available for remote work globally
