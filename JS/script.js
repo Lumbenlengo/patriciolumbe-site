@@ -1,5 +1,6 @@
-// patriciolumbe.com
-
+/* ============================================================
+   patriciolumbe.com : main script
+   ============================================================ */
 
 (function () {
   'use strict';
@@ -130,30 +131,23 @@
     }
   }
 
-  
+  /* ── Custom cursor ──────────────────────────────────── */
   const hasFinePointer = window.matchMedia('(pointer: fine)').matches;
 
   if (hasFinePointer) {
-    const dot = document.querySelector('.cursor-dot');
-    const ring = document.querySelector('.cursor-ring');
+    const cursor = document.querySelector('.cursor-dot');
 
-    if (dot && ring) {
+    if (cursor) {
       document.documentElement.classList.add('has-custom-cursor');
 
-      let ringX = 0, ringY = 0;
+      let curX = 0, curY = 0;
       let targetX = 0, targetY = 0;
-
-      // Ring trails the dot with easing — the "walking" feel.
-      // Reduced motion: snap instantly instead of trailing.
-      const ease = prefersReducedMotion ? 1 : 0.18;
+      const ease = prefersReducedMotion ? 1 : 0.2;
 
       const render = () => {
-        ringX += (targetX - ringX) * ease;
-        ringY += (targetY - ringY) * ease;
-
-        dot.style.transform = `translate3d(${targetX}px, ${targetY}px, 0)`;
-        ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`;
-
+        curX += (targetX - curX) * ease;
+        curY += (targetY - curY) * ease;
+        cursor.style.transform = `translate3d(${curX}px, ${curY}px, 0)`;
         requestAnimationFrame(render);
       };
 
@@ -162,26 +156,50 @@
         targetY = e.clientY;
       }, { passive: true });
 
-      // Grow the ring over anything clickable.
       const hoverTargets = 'a, button, .btn, .chip, .service-card, .portfolio-card, .video-thumb, input, textarea, [role="button"]';
       document.addEventListener('mouseover', (e) => {
-        if (e.target.closest(hoverTargets)) ring.classList.add('is-hover');
+        if (e.target.closest(hoverTargets)) cursor.classList.add('is-hover');
       });
       document.addEventListener('mouseout', (e) => {
-        if (e.target.closest(hoverTargets)) ring.classList.remove('is-hover');
+        if (e.target.closest(hoverTargets)) cursor.classList.remove('is-hover');
       });
 
-      // Hide when the pointer leaves the window entirely.
-      document.addEventListener('mouseleave', () => {
-        dot.style.opacity = '0';
-        ring.style.opacity = '0';
-      });
-      document.addEventListener('mouseenter', () => {
-        dot.style.opacity = '';
-        ring.style.opacity = '';
-      });
+      document.addEventListener('mouseleave', () => { cursor.style.opacity = '0'; });
+      document.addEventListener('mouseenter', () => { cursor.style.opacity = ''; });
 
       requestAnimationFrame(render);
     }
+  }
+
+  /* ── Contact form ─────────────────────────────────────*/
+  const contactForm = document.getElementById('contact-form');
+  const formStatus = document.getElementById('form-status');
+
+  if (contactForm && formStatus) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      formStatus.textContent = 'Sending…';
+      formStatus.className = 'form-status';
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { Accept: 'application/json' },
+        });
+
+        if (response.ok) {
+          formStatus.textContent = 'Message sent — I\'ll reply within a day.';
+          formStatus.className = 'form-status is-success';
+          contactForm.reset();
+        } else {
+          formStatus.textContent = 'Something went wrong. Please email me directly instead.';
+          formStatus.className = 'form-status is-error';
+        }
+      } catch (err) {
+        formStatus.textContent = 'Something went wrong. Please email me directly instead.';
+        formStatus.className = 'form-status is-error';
+      }
+    });
   }
 })();
