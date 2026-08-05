@@ -1,4 +1,5 @@
-# Patricio Lumbe — Cloud Engineering Portfolio Platform
+# Patricio Lumbe
+# Cloud Engineering Portfolio Platform
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6e336fcc-d0b0-47fd-b925-344fd678a70e" alt="WEBSITE" style="width: 100%; max-width: 1000px; height: auto;" />
@@ -79,7 +80,7 @@ long Lambda chain, and when Fargate actually beats EC2. If you're hiring
 someone to make architecture calls, this is what you want to hear before
 anything else.
 
-**Verified certifications** — AWS Cloud Practitioner and Solutions Architect
+**Verified certifications** AWS Cloud Practitioner and Solutions Architect
 Associate, both linking straight to their public Credly verification pages.
 No badge on this site is unverifiable.
 
