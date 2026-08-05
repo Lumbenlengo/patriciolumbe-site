@@ -1,0 +1,558 @@
+/* ==================================================================
+   contact.css — Patricio Lumbe portfolio
+   Contact section and form, footer, scroll reveal utility,
+   responsive breakpoints, reduced motion, print styles
+   ================================================================== */
+
+/* ── Contact ───────────────────────────────────────────── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.contact-email {
+  display: inline-block;
+  margin-top: 28px;
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-strong);
+  padding-bottom: 3px;
+  transition: border-color 0.18s ease;
+}
+.contact-email:hover { border-bottom-color: var(--accent); }
+
+.social-grid { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.social-link {
+  display: block;
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  text-decoration: none;
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+.social-link:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
+.social-name { display: block; font-family: var(--display); font-size: 14px; font-weight: 600; color: var(--text); }
+.social-handle { display: block; font-family: var(--mono); font-size: 11px; color: var(--muted); margin-top: 3px; }
+
+/* ── Contact form ──────────────────────────────────────── */
+.contact-form-wrap {
+  margin-top: 80px;
+  max-width: 760px;
+  border-radius: var(--radius);
+  padding: 40px;
+}
+.contact-form-title { font-size: clamp(22px, 2.6vw, 28px); margin-top: 4px; margin-bottom: 28px; }
+
+.contact-form { display: grid; gap: 18px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.form-field { display: flex; flex-direction: column; gap: 7px; }
+.form-field-full { width: 100%; }
+
+.form-field label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--text);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder { color: var(--muted); }
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: var(--ring);
+}
+.contact-form textarea { resize: vertical; min-height: 120px; }
+
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px; height: 1px;
+  opacity: 0;
+}
+
+.form-footer { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 4px; }
+.form-status { font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+.form-status.is-success { color: var(--success); }
+.form-status.is-error { color: var(--danger); }
+
+/* ── Footer ────────────────────────────────────────────── */
+.footer { border-top: 1px solid var(--border); padding: 28px 0; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.footer-text { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.availability {
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--mono); font-size: 11px; font-weight: 600; color: var(--success);
+}
+
+/* ── Scroll reveal ─────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1), transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 1060px) {
+  .hero-inner { gap: 44px; }
+  .about-grid { gap: 48px; }
+}
+
+@media (max-width: 980px) {
+  :root { --section-pad: 76px; }
+
+  .container { padding: 0 22px; }
+  .nav-inner { padding: 14px 22px; }
+  .nav-status { display: none; }
+
+  .nav-toggle { display: flex; }
+  .nav-menu {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: rgba(15, 23, 42, 0.97);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    transform: translateY(-6px);
+    visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  }
+  .nav-menu.is-open { opacity: 1; transform: none; visibility: visible; }
+  .nav-links { flex-direction: column; gap: 0; padding: 8px 22px 18px; }
+  .nav-links a { display: block; padding: 14px 2px; font-size: 13px; border-bottom: 1px solid var(--border); }
+
+  .hero { min-height: auto; padding-top: 116px; }
+  .hero-inner,
+  .about-grid,
+  .contact-grid { grid-template-columns: 1fr; gap: 44px; }
+
+  .about-media { grid-template-columns: 1fr 1fr; align-items: stretch; }
+  .photo-frame { max-width: 340px; }
+
+  .stack-panel { padding: 26px 22px; margin-top: 56px; }
+
+  .services-grid,
+  .cert-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .case-study { grid-template-columns: 40px 1fr; }
+  .case-study-media { grid-column: 1 / -1; }
+
+  .metrics { grid-template-columns: repeat(2, 1fr); margin-top: 52px; }
+
+  .btn { min-height: 44px; }
+  .contact-form-wrap { padding: 28px 22px; }
+}
+
+@media (max-width: 620px) {
+  .services-grid,
+  .cert-grid,
+  .social-grid,
+  .about-media { grid-template-columns: 1fr; }
+
+  .metrics { grid-template-columns: 1fr 1fr; }
+  .decision { grid-template-columns: 1fr; gap: 6px; }
+  .case-study { grid-template-columns: 1fr; }
+  .case-study-index { display: none; }
+  .terminal-body { font-size: 11px; min-height: 200px; }
+  .hero-cta .btn { width: 100%; }
+  .pipeline { padding: 10px 12px; gap: 8px; }
+  .pipeline-name { font-size: 10px; }
+  .chip-badge img { height: 24px; }
+
+  .container { padding: 0 18px; }
+  .section-head { margin-bottom: 40px; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-inner { justify-content: center; text-align: center; }
+}
+
+/* ── Motion preferences ────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal, .load-seq { opacity: 1; transform: none; }
+}
+
+/* ── Print (recruiters do print pages) ─────────────────── */
+@media print {
+  .nav, .aurora, .grid-bg, .hero-cta, .nav-toggle { display: none !important; }
+  body { background: #fff; color: #111; }
+  .reveal, .load-seq { opacity: 1; transform: none; }
+  .glass, .metric, .terminal, .stack-panel { background: #fff !important; border-color: #ddd !important; }
+}
+/* ==================================================================
+   extras.css — Patricio Lumbe portfolio
+   Later additions: official tech icon tiles, project video pages,
+   compact portfolio cards, mini tech icons, language buttons,
+   Credly badge embeds, "coming soon" markers
+   ================================================================== */
+
+/* ============================================================
+   Official technology icons: AWS architecture tiles + brands
+   ============================================================ */
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  align-items: center;
+}
+.tech {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 15px 7px 7px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.tech:hover {
+  transform: translateY(-2px);
+  border-color: rgba(var(--sa), 0.5);
+  box-shadow: 0 6px 18px rgba(2, 6, 16, 0.4), 0 0 24px rgba(var(--sa), 0.12);
+}
+.tech-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  display: block;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(2, 6, 16, 0.45);
+}
+.tech-icon-brand {
+  padding: 4px;
+  background: #fff;
+  box-sizing: border-box;
+}
+.tech-name {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-2);
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+.tech:hover .tech-name { color: var(--text); }
+
+/* Ticker icons */
+.ticker-item { display: inline-flex; align-items: center; gap: 8px; }
+.ticker-icon {
+  width: 17px;
+  height: 17px;
+  border-radius: 4px;
+  display: block;
+}
+img.ticker-icon { border-radius: 3px; background: #fff; padding: 2px; box-sizing: border-box; }
+
+@media (max-width: 620px) {
+  .tech { padding: 6px 12px 6px 6px; gap: 8px; }
+  .tech-icon { width: 26px; height: 26px; }
+  .tech-name { font-size: 11px; }
+}
+
+/* ============================================================
+   Project video pages (project-1.html and future projects)
+   ============================================================ */
+.vp-page { padding-top: 140px; --sa: 34, 211, 238; --sa-hex: #22d3ee; }
+.vp-head { max-width: 720px; margin-bottom: 48px; }
+.vp-lede { font-size: 17px; }
+
+.lang-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+.lang-pill {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text-2);
+  transition: all 0.2s ease;
+}
+.lang-pill:hover {
+  border-color: var(--sa-hex);
+  color: var(--sa-hex);
+  transform: translateY(-1px);
+}
+.lang-pill-active {
+  background: linear-gradient(120deg, var(--sa-hex), color-mix(in srgb, var(--sa-hex) 55%, #ffffff));
+  color: #0b1626;
+  border-color: var(--sa-hex);
+}
+
+.vp-list { display: grid; gap: 24px; }
+.vp-item {
+  display: grid;
+  grid-template-columns: minmax(320px, 46%) 1fr;
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+}
+.vp-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(var(--sa), 0.4);
+  box-shadow: var(--shadow-lg), 0 0 44px rgba(var(--sa), 0.14);
+}
+.vp-media {
+  background: var(--bg-elevated);
+  aspect-ratio: 16 / 9;
+}
+.vp-media video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  accent-color: var(--sa-hex);
+}
+.vp-body {
+  padding: 26px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.vp-num {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--sa-hex);
+  letter-spacing: 0.12em;
+}
+.vp-title {
+  font-family: var(--display);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+  color: var(--text);
+  transition: color 0.22s ease;
+}
+.vp-item:hover .vp-title { color: var(--sa-hex); }
+.vp-desc { color: var(--text-2); font-size: 15px; line-height: 1.7; }
+
+.vp-soon {
+  border-radius: var(--radius);
+  border-style: dashed;
+  padding: 32px;
+  text-align: center;
+}
+.vp-soon-title {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--amber);
+  margin-bottom: 8px;
+}
+.vp-soon .vp-desc { max-width: 52ch; margin: 0 auto; }
+
+/* Portfolio card: language buttons */
+.lang-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 22px;
+}
+.lang-buttons .btn { width: 100%; }
+
+@media (max-width: 980px) {
+  .vp-page { padding-top: 110px; }
+  .vp-item { grid-template-columns: 1fr; }
+  .vp-body { padding: 20px 22px 24px; }
+}
+@media (max-width: 620px) {
+  .lang-buttons { grid-template-columns: 1fr; }
+  .lang-pill { flex: 1; text-align: center; }
+}
+
+/* ── Portfolio cards: compact, closer to a square footprint ── */
+.portfolio-media { aspect-ratio: 16 / 10; }
+.portfolio-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.portfolio-body { padding: 18px 20px 20px; }
+.portfolio-card .project-title { font-size: 18px; line-height: 1.25; }
+.portfolio-card .prose {
+  font-size: 13.5px;
+  margin-top: 8px;
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.portfolio-chips { margin-top: 12px; }
+.portfolio-chips .chip { padding: 4px 10px; font-size: 10.5px; }
+.lang-buttons { margin-top: 12px; gap: 7px; }
+.lang-buttons .btn { padding: 7px 10px; font-size: 11px; }
+.portfolio-actions { margin-top: 12px; }
+.project-kicker { margin-bottom: 6px; font-size: 10.5px; }
+.lang-pill { text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
+
+/* ── Portfolio card: mini tech icon row (no text labels) ─── */
+.tech-mini {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  margin-top: 12px;
+}
+.tech-mini-item {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(2, 6, 16, 0.4);
+  transition: transform 0.2s ease;
+}
+.tech-mini-item:hover { transform: translateY(-2px) scale(1.06); }
+.tech-mini-icon { width: 100%; height: 100%; display: block; }
+.tech-mini-icon-brand { background: #fff; padding: 5px; box-sizing: border-box; }
+
+/* ── Language buttons: green accent for fr / es / pt ──────
+   Draws the eye toward the secondary languages without
+   competing with the primary English CTA.                  */
+.btn-lang-accent {
+  background: color-mix(in srgb, var(--success) 16%, transparent);
+  border: 1px solid color-mix(in srgb, var(--success) 55%, transparent);
+  color: var(--success);
+}
+.btn-lang-accent:hover {
+  background: var(--success);
+  border-color: var(--success);
+  color: #06281c;
+  transform: translateY(-1px);
+}
+
+.portfolio-hint {
+  margin-top: 12px;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 46ch;
+}
+
+/* ── Official Credly badge embeds ──────────────────────── */
+.cert-emblem-credly {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: -18px; /* the Credly iframe carries its own bottom whitespace */
+  filter: drop-shadow(0 6px 16px rgba(2, 6, 16, 0.5));
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.cert-card:hover .cert-emblem-credly { transform: scale(1.04); }
+.cert-emblem-credly iframe { display: block; }
+
+/* ── Architecture decisions: demo coming soon marker ───── */
+.decision-soon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 6px 14px 6px 8px;
+  border: 1px dashed var(--border-strong);
+  border-radius: 100px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: border-color 0.24s ease, color 0.24s ease;
+}
+.decision:hover .decision-soon {
+  border-color: rgba(var(--sa), 0.5);
+  color: var(--sa-hex);
+}
+.decision-soon-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  flex-shrink: 0;
+}
+
+@media (max-width: 620px) {
+  .cert-emblem-badge img { width: 80px; height: 80px; }
+}
+
+/* ── Ebook CTA (view & download) ───────────────────────── */
+.ebook-cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(120deg, rgba(var(--sa), 0.08), rgba(var(--sa), 0.02));
+  border: 1px solid rgba(var(--sa), 0.25);
+}
+.ebook-cta-icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card);
+  border: 1px solid var(--border-strong);
+  color: var(--sa-hex);
+}
+.ebook-cta-icon svg { width: 13px; height: 13px; }
+.ebook-cta-body { flex: 1; min-width: 0; }
+.ebook-cta-title {
+  font-family: var(--display);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+}
+.ebook-cta-sub {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.3;
+}
+.ebook-cta .btn {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  font-size: 11px;
+  min-height: auto;
+}
+
+@media (max-width: 620px) {
+  .ebook-cta { flex-wrap: wrap; }
+  .ebook-cta .btn { width: 100%; text-align: center; order: 3; }
+}

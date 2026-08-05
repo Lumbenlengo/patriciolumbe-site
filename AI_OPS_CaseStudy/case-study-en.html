@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Ops Serverless Platform | Case Study | Patricio Lumbe</title>
+  <meta name="description" content="Case study video walkthroughs: the architecture decisions behind the AI Ops Serverless Platform." />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="icon" type="image/svg+xml" href="../favicon-lt.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../CSS/style.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="aurora aurora-1" aria-hidden="true"></div>
+  <div class="aurora aurora-2" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="nav is-scrolled">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">PL<span>.dev</span></a>
+      <nav class="nav-menu" aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="../index.html#case-studies">&larr; Back to case studies</a></li>
+        </ul>
+      </nav>
+      <p class="nav-status" aria-label="Availability">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        Open to remote work
+      </p>
+    </div>
+  </header>
+
+  <main id="main" class="vp-page section">
+    <div class="container">
+
+      <div class="vp-head">
+        <p class="eyebrow">Case study · Video walkthrough</p>
+        <h1 class="section-title">AI Ops Serverless <em>Platform</em></h1>
+        <p class="prose vp-lede">
+          Anyone can wire AWS services together. The harder question is why you picked
+          those services and not the others. Two short videos on the two decisions that
+          shaped this platform, including the trade offs I accepted and what each costs to run.
+        </p>
+      </div>
+
+      <section class="vp-list">
+        <article class="vp-item glass reveal">
+          <div class="vp-media">
+            <video controls preload="metadata" controlsList="nodownload">
+              <source src="https://storage.googleapis.com/project-5c15975f-e002-4ccf-b67-videos/Study%20Case%20INGLES/_INGLES%20STUDY%20CASE_%20%201.0%20Why%20I%20Chose%20AWS%20Step%20Functions.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="vp-body">
+            <p class="vp-num">01</p>
+            <h2 class="vp-title">Why I Chose AWS Step Functions</h2>
+            <p class="vp-desc">The reasoning behind picking Step Functions for this platform: why a single Lambda chain was not enough, how pausing for a human decision costs nothing while waiting, and how a full audit trail comes for free.</p>
+          </div>
+        </article>
+        <article class="vp-item glass reveal">
+          <div class="vp-media">
+            <video controls preload="metadata" controlsList="nodownload">
+              <source src="https://storage.googleapis.com/project-5c15975f-e002-4ccf-b67-videos/Study%20Case%20INGLES/Study%20Case%20Ingles%20_%202.0%20Why%20Choose%20AWS%20Fargate%20Over%20EC2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="vp-body">
+            <p class="vp-num">02</p>
+            <h2 class="vp-title">AWS Fargate vs EC2: When to Choose Each</h2>
+            <p class="vp-desc">A practical trade-off comparison, not a theory lesson. Cost per workload, operational overhead, and the exact situations where Fargate wins and where EC2 still makes more sense.</p>
+          </div>
+        </article>
+      </section>
+
+      <p class="section-foot">
+        Want to see the code behind these decisions?
+        <a class="link-mono" href="https://github.com/Lumbenlengo" target="_blank" rel="noopener">View repository on GitHub &rarr;</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-text">&copy; <span id="year">2026</span> Patricio Lumbe &middot; designed and deployed as code</p>
+      <p class="availability">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        Available for remote projects
+      </p>
+    </div>
+  </footer>
+
+  <script src="../JS/script.js" defer></script>
+</body>
+</html>
