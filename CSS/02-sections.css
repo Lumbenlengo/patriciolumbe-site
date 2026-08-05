@@ -393,6 +393,25 @@
   border-color: var(--accent);
 }
 
+/* ── Video slot with a real video cover behind the play button ── */
+.video-slot-has-cover {
+  background:
+    linear-gradient(rgba(13, 20, 36, 0.6), rgba(13, 20, 36, 0.6));
+}
+.video-slot-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.video-slot-has-cover .video-play,
+.video-slot-has-cover .video-label {
+  position: relative;
+  z-index: 1;
+}
+
 .video-slot-overlay {
   position: absolute;
   inset: 0;
