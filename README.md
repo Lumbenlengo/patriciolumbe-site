@@ -62,18 +62,18 @@ protects something real, skip what's decoration.
 
 ### The portfolio itself
 
-**AI Ops Serverless Platform** — an AWS incident response system where AI
+**AI Ops Serverless Platform** an AWS incident response system where AI
 reads a CloudWatch alarm, explains the likely cause in plain English, and
 waits for a human to approve before touching anything. Full video walkthrough
 in **English, French, Spanish and Portuguese**, each with its own dedicated
 page so it can be shared and indexed on its own.
 
-**Production Ready AWS Environment** — a reference architecture: private by
+**Production Ready AWS Environment** a reference architecture: private by
 default networking, zero long lived AWS keys, infrastructure fully in
 Terraform. Public on GitHub, ready to be read line by line before anyone signs
 a contract based on a claim in a CV.
 
-**Case study videos** — not a demo reel. The reasoning behind the two
+**Case study videos** not a demo reel. The reasoning behind the two
 decisions that shaped the AI Ops platform: why Step Functions instead of one
 long Lambda chain, and when Fargate actually beats EC2. If you're hiring
 someone to make architecture calls, this is what you want to hear before
