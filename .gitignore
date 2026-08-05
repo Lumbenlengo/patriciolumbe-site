@@ -7,3 +7,4 @@ firebase-debug.log
 node_modules/
 github-key.json
 .env
+firebase-deploy-key.json
