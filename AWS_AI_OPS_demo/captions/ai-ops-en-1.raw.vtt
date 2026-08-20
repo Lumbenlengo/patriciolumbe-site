@@ -1,0 +1,78 @@
+WEBVTT
+
+1
+00:00:06.040 --> 00:00:07.880
+hello everybody i'm pa
+tricio lumbi i'm a aws cloud and
+
+2
+00:00:07.880 --> 00:00:11.800
+develop engineer and today
+i'd like to show you my project
+
+3
+00:00:11.800 --> 00:00:15.520
+that i built for a practical
+problem imagine if your
+
+4
+00:00:15.520 --> 00:00:20.440
+production breaks at 3:00 a.m in
+the morning and nobody is
+
+5
+00:00:22.040 --> 00:00:24.640
+watching so the alarm
+triggers but the alarm cannot
+
+6
+00:00:24.640 --> 00:00:29.480
+solve the problem
+itself it still needs someone to
+notice this problem
+
+7
+00:00:30.040 --> 00:00:36.880
+solve this problem going through
+logs and figuring figuring out
+
+8
+00:00:36.920 --> 00:00:39.640
+what happened and decide to fix
+this
+
+9
+00:00:41.000 --> 00:00:45.960
+problem in a traditional
+process this can take hours even
+
+10
+00:00:46.400 --> 00:00:52.240
+two or or three hours for a
+business those three hours are
+
+11
+00:00:52.240 --> 00:00:56.120
+not just an engineering
+problem they can cause many
+
+12
+00:00:56.120 --> 00:01:00.000
+other problems like a lost of
+revenue
+
+13
+00:01:00.040 --> 00:01:04.600
+or allow productivity even a
+potential poor customer
+
+14
+00:01:06.280 --> 00:01:10.360
+experience that's why i decide
+to build this project to address
+this
+
+15
+00:01:10.360 --> 00:01:25.360
+problem
+

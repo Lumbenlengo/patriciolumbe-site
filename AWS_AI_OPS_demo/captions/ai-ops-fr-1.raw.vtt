@@ -1,0 +1,242 @@
+WEBVTT
+
+1
+00:00:00.560 --> 00:00:00.600
+et
+
+2
+00:00:07.040 --> 00:00:08.800
+et hello voici le diagramme euh
+du
+
+3
+00:00:11.240 --> 00:00:14.120
+projet regardons ça de gauche à
+droite tout commence
+
+4
+00:00:16.880 --> 00:00:19.320
+ici orders api une charge de
+travail des mots qui tourne sur
+
+5
+00:00:22.200 --> 00:00:22.800
+ss farget et ici on a
+
+6
+00:00:25.440 --> 00:00:30.000
+cloud watch la euh
+cloud watch la surveillance en
+permanence
+
+7
+00:00:30.280 --> 00:00:34.600
+en suivant une métrique
+personnalisée que j'ai que j'ai
+
+8
+00:00:34.600 --> 00:00:40.200
+appelé errors ici et ici on peut
+voir event
+
+9
+00:00:41.360 --> 00:00:42.960
+bridge quand les erreurs
+dépassent un
+
+10
+00:00:45.440 --> 00:00:48.840
+seuil cloud watch déclenche un
+changement d'état d'alarme Ça
+
+11
+00:00:48.840 --> 00:00:52.560
+passe par event
+bridge pensez-y comme le routeur
+
+12
+00:00:52.560 --> 00:01:00.000
+d'événement de aws qui démarre
+un workflow dans step
+function ici
+
+13
+00:01:00.480 --> 00:01:01.360
+on trouve les step
+
+14
+00:01:04.000 --> 00:01:06.280
+function l'outil aws pour
+orchestrer le processus en
+
+15
+00:01:06.280 --> 00:01:08.280
+plusieurs étapes avec des pauses
+
+16
+00:01:10.240 --> 00:01:15.520
+intégrées step function appelle
+une fonction lambda ici nommé
+
+17
+00:01:15.520 --> 00:01:21.280
+anomalie analyser elle construit
+un pont contrainte et l'envoie à
+
+18
+00:01:22.480 --> 00:01:23.640
+cloud ai hébergé via
+
+19
+00:01:28.240 --> 00:01:30.000
+amazon bedrock cloud ai lit
+l'alarme
+
+20
+00:01:30.000 --> 00:01:34.360
+et renvoie la
+cause-racine l'urgence est une
+
+21
+00:01:34.480 --> 00:01:37.720
+action recommandée mais
+uniquement
+
+22
+00:01:38.840 --> 00:01:42.880
+uniquement parmi une liste
+d'actions que j'autorise
+
+23
+00:01:45.320 --> 00:01:47.760
+explicitement et voici la
+frontière importante le modèle
+
+24
+00:01:47.800 --> 00:01:51.120
+ne choisit jamais sa propre
+cible Ça vient de cette
+
+25
+00:01:51.120 --> 00:01:53.840
+remédiation map entièrement
+gérée par
+
+26
+00:01:55.160 --> 00:01:59.720
+terraform si une alarme n'est
+pas dans cette carte le système
+se limite à enregistrer l'inst
+
+27
+00:02:02.160 --> 00:02:05.680
+incident il ne devine jamais
+quel serveur touché et ici en
+
+28
+00:02:05.920 --> 00:02:09.200
+bas on peut trouver deux autres
+fonctions cost reporter et
+
+29
+00:02:09.520 --> 00:02:13.800
+run book assistant run book
+assistant ou un assistant de
+
+30
+00:02:14.040 --> 00:02:17.760
+run book qui répond aux
+questions opérationnelles en
+
+31
+00:02:17.760 --> 00:02:20.360
+utilisant ma propre
+documentation comme
+
+32
+00:02:21.800 --> 00:02:25.320
+contexte et un ici en bas on a
+cost reporter qui est le
+
+33
+00:02:25.480 --> 00:02:29.960
+rapporteur de cours qui me donne
+un résumé quotidien en langue
+
+34
+00:02:30.040 --> 00:02:33.840
+engagement clair des dépenses
+des dépenses à
+
+35
+00:02:35.960 --> 00:02:40.440
+aws il sait des fonctions sont
+dans même schéma mais ils ont
+
+36
+00:02:40.440 --> 00:02:41.000
+des tâches
+
+37
+00:02:44.280 --> 00:02:47.800
+différentes et après l'analyse
+part vers slack ensuite le
+
+38
+00:02:47.800 --> 00:02:51.920
+workflow se met en pause
+complètement à coup zéro jusqu'à
+
+39
+00:02:51.920 --> 00:02:55.960
+ce qu'un humain l'approuve sur
+un tableau de bord que j'ai
+
+40
+00:02:55.960 --> 00:02:59.960
+construit appelé mission
+contrôle une fonction
+
+41
+00:03:00.440 --> 00:03:06.640
+approuvé une une fois une fois
+approuvé une seule fonction
+
+42
+00:03:06.640 --> 00:03:08.880
+lambda les rémédiateurs
+
+43
+00:03:11.680 --> 00:03:13.200
+a le droit de toucher réellement
+
+44
+00:03:17.640 --> 00:03:20.560
+l'infrastructure donc une fois
+les fonctions est approuvé ici
+
+45
+00:03:20.600 --> 00:03:24.680
+sur mission de contrôle une
+seule fonction lambda dans ces
+
+46
+00:03:24.680 --> 00:03:29.920
+cas les fonctions lambda c'est
+c'est celle-ci les fonctions
+lambda
+
+47
+00:03:30.080 --> 00:03:32.440
+la rémédiateur a le droit de
+toucher réellement
+
+48
+00:03:32.440 --> 00:03:34.200
+l'infrastructure pour résoudre
+les
+
+49
+00:03:34.200 --> 00:03:49.200
+problèmes
+

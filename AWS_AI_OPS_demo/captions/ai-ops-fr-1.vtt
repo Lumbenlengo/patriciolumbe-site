@@ -1,0 +1,241 @@
+WEBVTT
+
+1
+00:00:00.560 --> 00:00:00.600
+Et
+
+2
+00:00:07.040 --> 00:00:08.800
+Et hello voici le diagramme euh
+du
+
+3
+00:00:11.240 --> 00:00:14.120
+Projet regardons ça de gauche à
+droite tout commence
+
+4
+00:00:16.880 --> 00:00:19.320
+Ici orders API une charge de
+travail des mots qui tourne sur
+
+5
+00:00:22.200 --> 00:00:22.800
+Ss Fargate et ici on a
+
+6
+00:00:25.440 --> 00:00:30.000
+CloudWatch la euh CloudWatch
+la surveillance en permanence
+
+
+7
+00:00:30.280 --> 00:00:34.600
+En suivant une métrique
+personnalisée que j'ai que j'ai
+
+8
+00:00:34.600 --> 00:00:40.200
+Appelé errors ici et ici on peut
+voir event
+
+9
+00:00:41.360 --> 00:00:42.960
+Bridge quand les erreurs
+dépassent un
+
+10
+00:00:45.440 --> 00:00:48.840
+Seuil CloudWatch déclenche un changement
+d'état d'alarme Ça
+
+11
+00:00:48.840 --> 00:00:52.560
+Passe par EventBridge
+pensez-y comme le routeur
+
+12
+00:00:52.560 --> 00:01:00.000
+D'événement de AWS qui démarre
+un workflow dans Step
+Functions ici
+
+13
+00:01:00.480 --> 00:01:01.360
+On trouve les step
+
+14
+00:01:04.000 --> 00:01:06.280
+Function l'outil AWS pour
+orchestrer le processus en
+
+15
+00:01:06.280 --> 00:01:08.280
+Plusieurs étapes avec des pauses
+
+16
+00:01:10.240 --> 00:01:15.520
+Intégrées Step Functions appelle
+une fonction Lambda ici nommé
+
+17
+00:01:15.520 --> 00:01:21.280
+Anomalie analyser elle construit
+un pont contrainte et l'envoie à
+
+18
+00:01:22.480 --> 00:01:23.640
+Claude hébergé via
+
+19
+00:01:28.240 --> 00:01:30.000
+Amazon Bedrock Claude lit
+l'alarme
+
+20
+00:01:30.000 --> 00:01:34.360
+Et renvoie la
+cause-racine l'urgence est une
+
+21
+00:01:34.480 --> 00:01:37.720
+Action recommandée mais
+uniquement
+
+22
+00:01:38.840 --> 00:01:42.880
+Uniquement parmi une liste
+d'actions que j'autorise
+
+23
+00:01:45.320 --> 00:01:47.760
+Explicitement et voici la
+frontière importante le modèle
+
+24
+00:01:47.800 --> 00:01:51.120
+Ne choisit jamais sa propre
+cible Ça vient de cette
+
+25
+00:01:51.120 --> 00:01:53.840
+Remédiation map entièrement
+gérée par
+
+26
+00:01:55.160 --> 00:01:59.720
+Terraform si une alarme n'est
+pas dans cette carte le système
+se limite à enregistrer l'inst
+
+27
+00:02:02.160 --> 00:02:05.680
+Incident il ne devine jamais
+quel serveur touché et ici en
+
+28
+00:02:05.920 --> 00:02:09.200
+Bas on peut trouver deux autres
+fonctions cost reporter et
+
+29
+00:02:09.520 --> 00:02:13.800
+Run book assistant ou un assistant de
+
+30
+00:02:14.040 --> 00:02:17.760
+Run book qui répond aux
+questions opérationnelles en
+
+31
+00:02:17.760 --> 00:02:20.360
+Utilisant ma propre
+documentation comme
+
+32
+00:02:21.800 --> 00:02:25.320
+Contexte et un ici en bas on a
+cost reporter qui est le
+
+33
+00:02:25.480 --> 00:02:29.960
+Rapporteur de cours qui me donne
+un résumé quotidien en langue
+
+34
+00:02:30.040 --> 00:02:33.840
+Engagement clair des dépenses
+des dépenses à
+
+35
+00:02:35.960 --> 00:02:40.440
+AWS il sait des fonctions sont
+dans même schéma mais ils ont
+
+36
+00:02:40.440 --> 00:02:41.000
+Des tâches
+
+37
+00:02:44.280 --> 00:02:47.800
+Différentes et après l'analyse
+part vers Slack ensuite le
+
+38
+00:02:47.800 --> 00:02:51.920
+Workflow se met en pause
+complètement à coût zéro jusqu'à
+
+39
+00:02:51.920 --> 00:02:55.960
+Ce qu'un humain l'approuve sur
+un tableau de bord que j'ai
+
+40
+00:02:55.960 --> 00:02:59.960
+Construit appelé mission
+contrôle une fonction
+
+41
+00:03:00.440 --> 00:03:06.640
+Approuvé une une fois une fois
+approuvé une seule fonction
+
+42
+00:03:06.640 --> 00:03:08.880
+Lambda les rémédiateurs
+
+43
+00:03:11.680 --> 00:03:13.200
+A le droit de toucher réellement
+
+44
+00:03:17.640 --> 00:03:20.560
+L'infrastructure donc une fois
+les fonctions est approuvé ici
+
+45
+00:03:20.600 --> 00:03:24.680
+Sur mission de contrôle une
+seule fonction Lambda dans ces
+
+46
+00:03:24.680 --> 00:03:29.920
+Cas les fonctions Lambda c'est
+c'est celle-ci les fonctions
+Lambda
+
+47
+00:03:30.080 --> 00:03:32.440
+La rémédiateur a le droit de
+toucher réellement
+
+48
+00:03:32.440 --> 00:03:34.200
+L'infrastructure pour résoudre
+les
+
+49
+00:03:34.200 --> 00:03:49.200
+Problèmes
+

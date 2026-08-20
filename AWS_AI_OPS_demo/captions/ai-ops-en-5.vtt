@@ -1,0 +1,113 @@
+WEBVTT
+
+1
+00:00:04.240 --> 00:00:07.840
+So before we simulate a
+failure let's
+
+2
+00:00:09.080 --> 00:00:11.080
+Make sure everything is working
+very
+
+3
+00:00:13.120 --> 00:00:16.680
+Well first let's make sure the
+application is healthy before we
+
+4
+00:00:16.680 --> 00:00:17.400
+Simulate any
+
+5
+00:00:19.560 --> 00:00:21.160
+Problem so let me put the
+
+6
+00:00:24.880 --> 00:00:30.000
+I read the name so as we can see
+here the status is healthy
+
+7
+00:00:30.200 --> 00:00:36.080
+Service holder API and the dev
+and so it's working very
+
+8
+00:00:37.680 --> 00:00:39.960
+Well as you can see the
+application is healthy and
+
+9
+00:00:39.960 --> 00:00:43.440
+Responding
+successfully the status is
+
+10
+00:00:43.440 --> 00:00:49.000
+Healthy service orders
+API everything is working
+
+11
+00:00:51.880 --> 00:00:55.840
+Well now let's make sure
+cloud watch isn't reporting any
+problem
+
+12
+00:00:58.680 --> 00:00:59.960
+Yet so it's okay so
+
+13
+00:01:00.880 --> 00:01:05.800
+The alarm is in the okay state
+exactly what we would like
+
+14
+00:01:05.800 --> 00:01:07.640
+Expect before triggering the
+
+15
+00:01:09.920 --> 00:01:14.720
+Demo and finally let's confirm
+if the ECS service itself is
+
+16
+00:01:16.480 --> 00:01:21.720
+Healthy so as we can see here is
+the status is active for the
+
+17
+00:01:25.360 --> 00:01:30.000
+ECS service so our container is
+working also very well so
+
+18
+00:01:31.320 --> 00:01:35.080
+At this point everything looks
+good the application is
+
+19
+00:01:35.640 --> 00:01:38.720
+Healthy the ECS service is
+running correctly and
+
+20
+00:01:39.440 --> 00:01:43.880
+CloudWatch isn't detecting any
+issue now let's intentionally
+
+21
+00:01:43.880 --> 00:01:47.680
+Break the application and watch
+how the the platform detects the
+
+22
+00:01:48.600 --> 00:01:49.840
+Problem so analyze it with
+
+23
+00:01:52.280 --> 00:02:00.000
+AI and so we will begin the
+remediation work
+

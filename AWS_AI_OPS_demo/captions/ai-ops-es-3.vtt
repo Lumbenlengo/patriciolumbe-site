@@ -1,0 +1,270 @@
+WEBVTT
+
+1
+00:00:04.080 --> 00:00:07.440
+Y aquí está Slack recibió la
+alerta
+
+2
+00:00:09.720 --> 00:00:13.400
+Automáticamente el mensaje
+incluye un resumen del
+
+3
+00:00:15.040 --> 00:00:17.600
+Problema una posible causa y una
+acción
+
+4
+00:00:18.840 --> 00:00:22.440
+Recomendada algo importante que
+lo tenemos
+
+5
+00:00:29.040 --> 00:00:29.960
+Aquí ah la
+
+6
+00:00:30.000 --> 00:00:30.920
+Y ayuda a
+
+7
+00:00:35.080 --> 00:00:35.680
+Analizar tenta explicarme tenemos aquí
+a
+
+8
+00:00:38.480 --> 00:00:42.120
+Summary eh analiza el
+incidente pero nunca decide por
+
+9
+00:00:42.120 --> 00:00:46.320
+Sí sola qué recurso
+modificar esa decisión está
+
+10
+00:00:46.320 --> 00:00:47.720
+Controlada por mi
+
+11
+00:00:51.280 --> 00:00:51.920
+Workflow eh purpose
+
+12
+00:00:54.720 --> 00:00:55.240
+Fix restart eh
+
+13
+00:00:58.520 --> 00:00:59.960
+Reviews esa decisión yo
+
+14
+00:01:00.360 --> 00:01:06.800
+Voy a tomarla aquí en esta
+aplicación que yo creé misión
+
+15
+00:01:08.960 --> 00:01:16.000
+Control eh yo creé este dash
+dashboard que desarrolla para
+
+16
+00:01:16.600 --> 00:01:18.160
+Gestionar estos
+
+17
+00:01:20.960 --> 00:01:24.880
+Incidentes eh aquí toda la
+información de de del incidente
+
+18
+00:01:24.880 --> 00:01:26.720
+Solamente existe dos
+
+19
+00:01:28.920 --> 00:01:29.960
+Opciones aprobar la remediación
+
+20
+00:01:30.040 --> 00:01:30.240
+O
+
+21
+00:01:32.360 --> 00:01:34.960
+Rechazarla eh por esto voy a
+clicar aquí en eso
+
+22
+00:01:42.600 --> 00:01:46.480
+Link aquí estamos
+aquí estamos en el dashboard
+
+23
+00:01:47.720 --> 00:01:52.120
+De mission control y la
+aplicación que yo creé
+
+24
+00:01:53.600 --> 00:01:56.520
+Aprobar o no
+
+25
+00:01:57.720 --> 00:01:59.320
+La remediación
+
+26
+00:02:01.800 --> 00:02:06.200
+Eh de este bag de este
+problema aquí tenemos todas las
+
+27
+00:02:06.200 --> 00:02:12.160
+Informaciones del incidente que
+aconteció con nuestra
+
+28
+00:02:14.240 --> 00:02:17.280
+Aplicación tenemos aquí el
+summary que explica todo demo
+
+29
+00:02:17.280 --> 00:02:21.640
+Application y deployment pero sí
+eh tengo
+
+30
+00:02:23.600 --> 00:02:24.240
+Dos
+
+31
+00:02:29.320 --> 00:02:30.000
+Opciones aprobar approve reject no
+action
+
+32
+00:02:31.360 --> 00:02:36.280
+Voy a probar la remediación y
+voy a clicar
+
+33
+00:02:38.560 --> 00:02:43.440
+Aquí este es el momento en el
+que el workflow continúa y
+
+34
+00:02:43.480 --> 00:02:46.920
+Recluta la acción de
+recuperación
+
+35
+00:02:49.920 --> 00:02:50.800
+Automáticamente podemos ver aquí
+
+36
+00:02:54.800 --> 00:03:00.000
+Incidente runbook también y es
+un asistente operativo dentro de
+la plataforma
+
+37
+00:03:01.400 --> 00:03:05.240
+Por ejemplo puedo preguntarle
+cómo hago un roll back después
+
+38
+00:03:05.240 --> 00:03:10.640
+De un despliegue fallido y
+responde utilizando mi propia
+
+39
+00:03:10.640 --> 00:03:11.800
+Documentación como
+
+40
+00:03:13.880 --> 00:03:14.640
+Contexto también tengo
+
+41
+00:03:17.560 --> 00:03:22.880
+Costos eh finalmente eh dónde
+puedo ver cuánto cuesta
+
+42
+00:03:23.080 --> 00:03:26.560
+Realmente ejecutar esta
+plataforma en
+
+43
+00:03:27.960 --> 00:03:29.960
+AWS y como puede ver que este
+está
+
+44
+00:03:30.000 --> 00:03:35.720
+De bajo esto demuestra que no es
+solamente una arquitectura
+
+45
+00:03:36.400 --> 00:03:39.720
+Interesante en teoría sino
+también una solución práctica
+
+46
+00:03:39.720 --> 00:03:41.200
+Económica para
+
+47
+00:03:43.760 --> 00:03:46.360
+Ejecutar y ahora volvamos ahora
+a la
+
+48
+00:03:49.360 --> 00:03:51.520
+Aplicación volvamos ahora a la
+aplicación para confirmar que la
+
+49
+00:03:51.520 --> 00:03:55.000
+Recuperación funcionó
+correctamente aquí como estamos
+
+50
+00:03:55.000 --> 00:03:59.960
+A ver succeeded que quiere decir
+que la aplicación está
+funcionando
+
+51
+00:04:06.440 --> 00:04:10.240
+En resumen la plataforma está
+la plataforma detecta
+
+52
+00:04:10.240 --> 00:04:13.640
+Automáticamente un
+problema utiliza ya para
+
+53
+00:04:14.480 --> 00:04:19.040
+Analizarlo solicita una decisión
+humana y después recluta la
+
+54
+00:04:20.400 --> 00:04:23.040
+Recuperación este es el ciclo
+completo de
+
+55
+00:04:24.640 --> 00:04:30.000
+Detección decisión y remediación
+automática
+
+56
+00:04:30.800 --> 00:04:31.680
+Gracias por verlo el
+
+57
+00:04:31.680 --> 00:04:46.680
+Proyecto gracias
+

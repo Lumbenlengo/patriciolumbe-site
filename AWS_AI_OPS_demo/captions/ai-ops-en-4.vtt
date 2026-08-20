@@ -1,0 +1,301 @@
+WEBVTT
+
+1
+00:00:03.480 --> 00:00:06.800
+Here is the project
+structure I organize everything
+
+2
+00:00:06.800 --> 00:00:10.880
+Into a reusable telephone
+modules so each part of the
+
+3
+00:00:10.880 --> 00:00:15.920
+Infrastructure has its own
+responsibility here we have the
+
+4
+00:00:17.840 --> 00:00:21.120
+Folders we have telephone folder
+inside we find
+
+5
+00:00:22.720 --> 00:00:25.840
+Environment so let me show
+environment here and also we
+
+6
+00:00:25.840 --> 00:00:26.120
+Have
+
+7
+00:00:29.480 --> 00:00:29.960
+Modules for example I have a
+
+8
+00:00:30.040 --> 00:00:32.560
+Uh for modules for
+
+9
+00:00:35.920 --> 00:00:38.840
+ECS app aam Step
+Functions application load
+
+10
+00:00:39.440 --> 00:00:42.320
+Balancer event which so this
+keeps the infrastructure
+
+11
+00:00:43.640 --> 00:00:47.400
+Clean modular and easy to
+maintain and over here are the
+
+12
+00:00:47.400 --> 00:00:49.440
+Four Lambda Lambda
+
+13
+00:00:51.480 --> 00:00:53.920
+Function uh each one has a
+single well-defined
+
+14
+00:00:53.920 --> 00:00:56.760
+Responsibility which makes
+
+15
+00:00:58.360 --> 00:01:00.000
+The system easier to understand
+
+16
+00:01:00.280 --> 00:01:04.280
+And test so everything in this
+project here
+
+17
+00:01:05.920 --> 00:01:08.280
+Was deployed automatically
+through
+
+18
+00:01:10.400 --> 00:01:13.680
+GitHub action every time I push
+new code the pipeline runs the
+
+19
+00:01:13.680 --> 00:01:18.160
+Automated test perform security
+checks and deploy infrastructure
+
+20
+00:01:18.160 --> 00:01:18.600
+Using
+
+21
+00:01:20.960 --> 00:01:23.200
+Terraform nothing is created was
+created manually in
+
+22
+00:01:24.920 --> 00:01:29.960
+AWS console so everything is
+defined as code that means every
+change version is a very
+
+23
+00:01:30.040 --> 00:01:32.520
+Question
+controlled for business this
+
+24
+00:01:32.520 --> 00:01:36.520
+Reduce deployment mistakes and
+makes entire platform much
+
+25
+00:01:36.520 --> 00:01:37.800
+Easier to manage over
+
+26
+00:01:39.960 --> 00:01:44.800
+Time so here we are in my
+GitHub account in inside of the
+
+27
+00:01:44.800 --> 00:01:48.040
+Repository of the project
+AWS AI serverless
+
+28
+00:01:49.880 --> 00:01:54.160
+Ops so everything every change
+starts here in
+
+29
+00:01:56.440 --> 00:01:59.960
+GitHub action before anything is
+deployed the pipeline
+automatically runs
+
+30
+00:02:01.000 --> 00:02:06.000
+Test like Python test checks the
+Terraform code quality and uh
+
+31
+00:02:06.440 --> 00:02:11.120
+Also the security scan and also
+applies the infrastructure
+
+32
+00:02:13.280 --> 00:02:16.640
+Change and uh now let's take a
+look here in the action so we
+
+33
+00:02:16.640 --> 00:02:18.680
+Can check if the deployment
+worked very
+
+34
+00:02:20.680 --> 00:02:22.800
+Well as we can see here the last
+deployment is
+
+35
+00:02:24.320 --> 00:02:30.000
+Green so let's enter here and uh
+here we can see as we can see
+the Python
+
+36
+00:02:30.040 --> 00:02:32.920
+Test passed uh the transform
+
+37
+00:02:35.640 --> 00:02:39.280
+Quality security everything is
+green so the deployment was
+
+38
+00:02:39.280 --> 00:02:44.800
+Completed successfully so this
+gives business confidence that
+
+39
+00:02:44.840 --> 00:02:48.200
+Every change has been validated
+before it reaches the
+
+40
+00:02:49.640 --> 00:02:54.600
+Production so it also it also
+makes the deployment consistent
+
+41
+00:02:54.600 --> 00:03:00.000
+And repeatable with much less
+prone to human error
+
+42
+00:03:03.320 --> 00:03:04.840
+So now let's go to
+
+43
+00:03:07.880 --> 00:03:09.200
+AWS console here we are in the
+
+44
+00:03:12.080 --> 00:03:15.160
+Ec2 dashboard now let's go to
+the load
+
+45
+00:03:17.800 --> 00:03:19.040
+Balancer so here we have our
+load
+
+46
+00:03:22.000 --> 00:03:22.920
+Balancer inside of the load
+
+47
+00:03:26.200 --> 00:03:29.960
+Balancer we can find our
+application which is connected
+
+48
+00:03:30.040 --> 00:03:32.920
+Connected with the load
+balancer as we can see the state
+
+49
+00:03:32.920 --> 00:03:33.200
+Is
+
+50
+00:03:35.280 --> 00:03:36.040
+Active uh let me enter
+
+51
+00:03:38.160 --> 00:03:38.440
+Here so it's
+
+52
+00:03:43.240 --> 00:03:45.200
+Working it's live it's active here we
+have the protocol uh it's
+
+53
+00:03:46.880 --> 00:03:49.200
+Http and it's forward this
+
+54
+00:03:50.880 --> 00:03:54.560
+So here we have uh my
+application
+
+55
+00:03:55.720 --> 00:04:00.000
+Is active and so this is the
+application load balancer
+
+56
+00:04:00.320 --> 00:04:02.560
+So he's routing all the incoming
+
+57
+00:04:04.960 --> 00:04:09.440
+Traffic and now I will copy its
+public dns so we can access
+
+58
+00:04:10.800 --> 00:04:16.520
+It I let it public uh so I let
+it http because it's a
+
+59
+00:04:17.800 --> 00:04:21.520
+Test it's a it's not uh the real
+real real
+
+60
+00:04:23.440 --> 00:04:25.920
+Prediction so that's why I put
+it in on
+
+61
+00:04:27.160 --> 00:04:29.960
+Http not http s for
+
+62
+00:04:31.240 --> 00:04:36.960
+Security so now let's copy the
+dns so we can see how
+
+63
+00:04:36.960 --> 00:04:51.960
+Application
+

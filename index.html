@@ -27,10 +27,13 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://storage.googleapis.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="CSS/01-foundations.css" />
   <link rel="stylesheet" href="CSS/02-sections.css" />
   <link rel="stylesheet" href="CSS/03-interface.css" />
+  <link rel="stylesheet" href="CSS/04-lightbox.css" />
+  <link rel="stylesheet" href="CSS/05-proof.css" />
 
   <!-- Structured data: helps recruiters' tools and search engines read the page -->
   <script type="application/ld+json">
@@ -99,6 +102,11 @@
     <section id="hero" class="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
+          <p class="open-badge load-seq" style="--seq: 0">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            Open to Cloud / DevOps roles &middot; Remote
+          </p>
+
           <p class="eyebrow load-seq" style="--seq: 0">Cloud infrastructure &amp; DevSecOps</p>
 
           <h1 class="hero-title load-seq" style="--seq: 1">
@@ -106,7 +114,7 @@
             <span class="hero-last">Lumbe</span>
           </h1>
 
-          <p class="hero-role load-seq" style="--seq: 2">Cloud Engineer | AWS &amp; DevOps</p>
+          <p class="hero-role load-seq" style="--seq: 2">Cloud Engineer focused on AWS, Infrastructure as Code and DevOps automation</p>
 
           <p class="hero-pitch load-seq" style="--seq: 3">
             I build AWS infrastructure the way I would want to inherit it: defined in
@@ -132,8 +140,23 @@
           </ul>
 
           <div class="hero-cta load-seq" style="--seq: 5">
-            <a href="mailto:patricioaleixo0@gmail.com" class="btn btn-primary">Start a conversation</a>
+            <a href="mailto:contact@patriciolumbe.com?cc=patricioaleixo0@gmail.com&subject=Cloud%2FDevOps%20role" class="btn btn-primary">Start a conversation</a>
             <a href="https://github.com/Lumbenlengo" class="btn btn-ghost" target="_blank" rel="noopener">See the code on GitHub</a>
+          </div>
+
+          <div class="hero-links load-seq" style="--seq: 5">
+            <a class="hero-link" href="Assets/CV-Patricio-Lumbenlengo.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+              Download CV
+            </a>
+            <a class="hero-link" href="https://www.linkedin.com/in/patricio-lumbenlengo-62b746277/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 11-4 0 2 2 0 014 0zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"/></svg>
+              LinkedIn
+            </a>
+            <a class="hero-link" href="#portfolio">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+              Jump to projects
+            </a>
           </div>
         </div>
 
@@ -218,7 +241,7 @@
           </div>
           <div class="about-card glass">
             <p class="about-card-label">Currently preparing</p>
-            <p class="about-card-value">AWS Solutions Architect Professional</p>
+            <p class="about-card-value">AWS DevOps Professional</p>
             <p class="about-card-sub"><span class="amber-dot" aria-hidden="true"></span>In progress</p>
           </div>
         </div>
@@ -393,9 +416,7 @@
 
           <li class="service-card glass reveal">
             <div class="service-cover">
-              <video autoplay muted playsinline preload="auto" aria-hidden="true">
-                <source src="https://storage.googleapis.com/project-5c15975f-e002-4ccf-b67-videos/Projecto%20INGLES/Projecto%200.0%20%20Video%20em%20ingles.mp4" type="video/mp4">
-              </video>
+              <img src="https://storage.googleapis.com/project-5c15975f-e002-4ccf-b67-videos/DIAGRAM%20IMAGE/diagram%20AI%20OPS%20PLATFORM.png" alt="Architecture diagram: AI assisted incident response on AWS with a human approval gate." loading="lazy" />
               <span class="portfolio-soon-badge">Full demo below &darr;</span>
             </div>
             <h3 class="service-title">AI assisted operations &amp; monitoring</h3>
@@ -434,8 +455,9 @@
 
           <article class="portfolio-card glass reveal">
             <div class="portfolio-media">
-              <video controls preload="metadata" controlsList="nodownload" aria-label="Project overview video: AI Ops Serverless Platform">
-                <source src="https://storage.googleapis.com/project-5c15975f-e002-4ccf-b67-videos/Projecto%20INGLES/Projecto%200.0%20%20Video%20em%20ingles.mp4" type="video/mp4">
+              <video controls playsinline preload="metadata" controlsList="nodownload" crossorigin="anonymous" aria-label="Project overview video: AI Ops Serverless Platform">
+                <source src="https://storage.googleapis.com/project-5c15975f-e002-4ccf-b67-videos/Projecto%20INGLES/1.0%20Serverless%20AI%20for%203%20A.M.%20Incidents.mp4" type="video/mp4">
+                <track kind="captions" src="AWS_AI_OPS_demo/captions/ai-ops-en-1.vtt" srclang="en" label="English" default>
               </video>
             </div>
 
@@ -456,6 +478,31 @@
                 <li class="tech-mini-item" role="img" aria-label="Python"><img class="tech-mini-icon tech-mini-icon-brand" src="https://cdn.simpleicons.org/python/3776AB" alt="" loading="lazy" /></li>
                 <li class="tech-mini-item" role="img" aria-label="Claude AI"><svg class="tech-mini-icon"><use href="icons.svg#i-claude"/></svg></li>
               </ul>
+
+              <ul class="proof">
+                <li class="proof-item"><span class="proof-value">Minutes</span><span class="proof-label">To understand an incident</span></li>
+                <li class="proof-item"><span class="proof-value">100%</span><span class="proof-label">Fixes need human approval</span></li>
+                <li class="proof-item"><span class="proof-value">8</span><span class="proof-label">Terraform modules</span></li>
+                <li class="proof-item"><span class="proof-value">&lt; €1</span><span class="proof-label">Per month when idle</span></li>
+              </ul>
+
+              <div class="plain">
+                <span class="plain-label">In plain terms</span>
+                <p class="plain-text">An engineer no longer wakes up to a wall of metrics and spends fifteen minutes working out what happened. The alarm arrives already explained, with a proposed fix waiting for a yes or no.</p>
+              </div>
+
+              <button type="button" class="diagram-trigger"
+                data-lightbox
+                data-lightbox-title="AI Ops Serverless Platform — Diagram &amp; case explainers"
+                data-lightbox-images='[
+                  {"src":"https://storage.googleapis.com/project-5c15975f-e002-4ccf-b67-videos/DIAGRAM%20IMAGE/diagram%20AI%20OPS%20PLATFORM.png","caption":"Full architecture diagram"},
+                  {"src":"https://storage.googleapis.com/project-5c15975f-e002-4ccf-b67-videos/DIAGRAM%20IMAGE/Engineering%20Challenges%20Solved.jpg","caption":"Engineering challenges solved"},
+                  {"src":"https://storage.googleapis.com/project-5c15975f-e002-4ccf-b67-videos/DIAGRAM%20IMAGE/Incident%20Response%20Pipeline.jpg","caption":"Incident response pipeline"},
+                  {"src":"https://storage.googleapis.com/project-5c15975f-e002-4ccf-b67-videos/DIAGRAM%20IMAGE/Safety%20Six%20Safeguards%20Between%20AI%20and%20Your%20Infrastructure.jpg","caption":"Six safeguards between AI and your infrastructure"}
+                ]'>
+                <svg class="diagram-trigger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+                View project diagram
+              </button>
 
               <div class="lang-buttons">
                 <a class="btn btn-primary btn-sm" href="AWS_AI_OPS_demo/project-en.html">🇬🇧 Watch in English</a>
@@ -488,35 +535,61 @@
 
           <article class="portfolio-card glass reveal">
             <div class="portfolio-media">
-              <img src="https://github.com/user-attachments/assets/611b8302-7cb5-4fba-94d0-de72d7fe1e47" alt="Architecture diagram: Production Ready AWS Infrastructure, Multi-AZ networking, load balancer, auto scaling and security services." loading="lazy" />
-              <span class="portfolio-soon-badge">Demo video coming soon</span>
+              <video controls playsinline preload="metadata" controlsList="nodownload" crossorigin="anonymous" aria-label="Project overview video: Cloud Portfolio Platform">
+                <source src="https://storage.googleapis.com/project-5c15975f-e002-4ccf-b67-videos/CLOUD%20PLATFORM%20WEB%20SITE/1.0-%20Secure%2C%20Fast%2C%20Cheap%20Website%20with%20Firebase.mp4" type="video/mp4">
+                <track kind="captions" src="CLOUD_PORTFOLIO_demo/captions/cloud-portfolio-en-1.vtt" srclang="en" label="English" default>
+              </video>
             </div>
 
             <div class="portfolio-body">
-              <p class="project-kicker">Infrastructure &amp; Security · Multi-AZ · Zero static keys</p>
-              <h3 class="project-title">Production Ready AWS Infrastructure</h3>
+              <p class="project-kicker">Google Cloud · Multi-cloud proof · Live right now</p>
+              <h3 class="project-title">Cloud Portfolio Platform</h3>
               <p class="prose">
-                An AWS environment built the way real products run: it survives a full zone
-                outage, rolls back a bad deploy on its own before it becomes an incident, and
-                runs CI/CD without a single stored AWS key anywhere.
+                The website you are looking at right now is itself a Google Cloud project.
+                Firebase Hosting for global delivery, Cloud Storage for video assets, secrets
+                kept in Secret Manager, an uptime check every five minutes, and a budget alert
+                so cost never surprises anyone. Every piece is defined in Terraform.
               </p>
 
               <ul class="tech-mini portfolio-tech">
-                <li class="tech-mini-item" role="img" aria-label="Amazon EC2 Auto Scaling"><svg class="tech-mini-icon"><use href="icons.svg#i-ec2asg"/></svg></li>
-                <li class="tech-mini-item" role="img" aria-label="Elastic Load Balancing"><svg class="tech-mini-icon"><use href="icons.svg#i-elb"/></svg></li>
-                <li class="tech-mini-item" role="img" aria-label="AWS WAF"><svg class="tech-mini-icon"><use href="icons.svg#i-waf"/></svg></li>
-                <li class="tech-mini-item" role="img" aria-label="Amazon GuardDuty"><svg class="tech-mini-icon"><use href="icons.svg#i-guardduty"/></svg></li>
+                <li class="tech-mini-item" role="img" aria-label="Google Cloud"><img class="tech-mini-icon tech-mini-icon-brand" src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="" loading="lazy" /></li>
+                <li class="tech-mini-item" role="img" aria-label="Firebase"><img class="tech-mini-icon tech-mini-icon-brand" src="https://cdn.simpleicons.org/firebase/FFCA28" alt="" loading="lazy" /></li>
                 <li class="tech-mini-item" role="img" aria-label="Terraform"><img class="tech-mini-icon tech-mini-icon-brand" src="https://cdn.simpleicons.org/terraform/844FBA" alt="" loading="lazy" /></li>
+                <li class="tech-mini-item" role="img" aria-label="Cloudflare"><img class="tech-mini-icon tech-mini-icon-brand" src="https://cdn.simpleicons.org/cloudflare/F38020" alt="" loading="lazy" /></li>
                 <li class="tech-mini-item" role="img" aria-label="GitHub Actions"><img class="tech-mini-icon tech-mini-icon-brand" src="https://cdn.simpleicons.org/githubactions/2088FF" alt="" loading="lazy" /></li>
               </ul>
 
+              <ul class="proof">
+                <li class="proof-item"><span class="proof-value">0</span><span class="proof-label">Service account keys stored</span></li>
+                <li class="proof-item"><span class="proof-value">5 min</span><span class="proof-label">Uptime check interval</span></li>
+                <li class="proof-item"><span class="proof-value">100%</span><span class="proof-label">Provisioned in Terraform</span></li>
+                <li class="proof-item"><span class="proof-value">2</span><span class="proof-label">Clouds, one workflow</span></li>
+              </ul>
+
+              <div class="plain">
+                <span class="plain-label">In plain terms</span>
+                <p class="plain-text">The whole site can be rebuilt from an empty Google Cloud project by running one command, and nobody has to keep a password anywhere for it to deploy.</p>
+              </div>
+
+              <button type="button" class="diagram-trigger"
+                data-lightbox
+                data-lightbox-title="Cloud Portfolio Platform — Diagram"
+                data-lightbox-images='[
+                  {"src":"Assets/diagrams/CLOUD_PORTFOLIO_PLATFORM_SVG.svg","caption":"Google Cloud architecture: Cloudflare, Firebase Hosting, Cloud Storage, Secret Manager, Cloud Monitoring"}
+                ]'>
+                <svg class="diagram-trigger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+                View project diagram
+              </button>
+
               <p class="portfolio-hint">
-                Five disciplines in one repo: infrastructure as code, architecture, CI/CD,
-                security, and reliability engineering. Not a demo that only works once.
+                The AWS projects on this page show what I build. This one shows how I run it:
+                monitored, budgeted, and provisioned entirely as code, on a second cloud.
               </p>
 
               <div class="portfolio-actions">
-                <a class="btn btn-primary btn-sm" href="https://github.com/Lumbenlengo/production-ready-aws-infrastructure" target="_blank" rel="noopener">View on GitHub</a>
+                <a class="btn btn-primary btn-sm" href="CLOUD_PORTFOLIO_demo/project-en.html">Watch the walkthrough</a>
+                <a class="btn btn-ghost btn-sm" href="https://patriciolumbe.com" target="_blank" rel="noopener">Visit patriciolumbe.com (live)</a>
+                <a class="btn btn-ghost btn-sm" href="https://github.com/Lumbenlengo/patriciolumbe-site" target="_blank" rel="noopener">View on GitHub</a>
               </div>
             </div>
           </article>
@@ -545,6 +618,28 @@
                 <li class="tech-mini-item" role="img" aria-label="GitHub Actions"><img class="tech-mini-icon tech-mini-icon-brand" src="https://cdn.simpleicons.org/githubactions/2088FF" alt="" loading="lazy" /></li>
               </ul>
 
+              <ul class="proof">
+                <li class="proof-item"><span class="proof-value">0</span><span class="proof-label">Pods when the queue is empty</span></li>
+                <li class="proof-item"><span class="proof-value">0</span><span class="proof-label">Static credentials</span></li>
+                <li class="proof-item"><span class="proof-value">15s</span><span class="proof-label">Queue check interval</span></li>
+                <li class="proof-item"><span class="proof-value">3</span><span class="proof-label">Availability zones</span></li>
+              </ul>
+
+              <div class="plain">
+                <span class="plain-label">In plain terms</span>
+                <p class="plain-text">You stop paying for servers that are doing nothing, and deploying is just merging code. Nobody needs console access to production to ship a change.</p>
+              </div>
+
+              <button type="button" class="diagram-trigger"
+                data-lightbox
+                data-lightbox-title="EKS GitOps Platform — Diagram"
+                data-lightbox-images='[
+                  {"src":"Assets/diagrams/EKS_8_SVG.svg","caption":"EKS GitOps platform architecture"}
+                ]'>
+                <svg class="diagram-trigger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+                View project diagram
+              </button>
+
               <p class="portfolio-hint">
                 Authentication happens through short lived tokens, never a stored key. Every
                 design decision, including what was rejected, is written up as an ADR.
@@ -558,36 +653,57 @@
 
           <article class="portfolio-card glass reveal">
             <div class="portfolio-media">
-              <img src="https://github.com/user-attachments/assets/6e336fcc-d0b0-47fd-b925-344fd678a70e" alt="Architecture diagram: Cloud Portfolio Platform, Cloudflare DNS, Firebase Hosting, Cloud Storage, Secret Manager, Cloud Monitoring and a Terraform driven CI/CD pipeline on Google Cloud." loading="lazy" />
+              <img src="https://github.com/user-attachments/assets/611b8302-7cb5-4fba-94d0-de72d7fe1e47" alt="Architecture diagram: Production Ready AWS Infrastructure, Multi-AZ networking, load balancer, auto scaling and security services." loading="lazy" />
               <span class="portfolio-soon-badge">Demo video coming soon</span>
             </div>
 
             <div class="portfolio-body">
-              <p class="project-kicker">Google Cloud · Multi-cloud proof · Live right now</p>
-              <h3 class="project-title">Cloud Portfolio Platform</h3>
+              <p class="project-kicker">Infrastructure &amp; Security · Multi-AZ · Zero static keys</p>
+              <h3 class="project-title">Production Ready AWS Infrastructure</h3>
               <p class="prose">
-                The website you are looking at right now is itself a Google Cloud project.
-                Firebase Hosting for global delivery, Cloud Storage for video assets, secrets
-                kept in Secret Manager, an uptime check every five minutes, and a budget alert
-                so cost never surprises anyone. Every piece is defined in Terraform.
+                An AWS environment built the way real products run: it survives a full zone
+                outage, rolls back a bad deploy on its own before it becomes an incident, and
+                runs CI/CD without a single stored AWS key anywhere.
               </p>
 
               <ul class="tech-mini portfolio-tech">
-                <li class="tech-mini-item" role="img" aria-label="Google Cloud"><img class="tech-mini-icon tech-mini-icon-brand" src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="" loading="lazy" /></li>
-                <li class="tech-mini-item" role="img" aria-label="Firebase"><img class="tech-mini-icon tech-mini-icon-brand" src="https://cdn.simpleicons.org/firebase/FFCA28" alt="" loading="lazy" /></li>
+                <li class="tech-mini-item" role="img" aria-label="Amazon EC2 Auto Scaling"><svg class="tech-mini-icon"><use href="icons.svg#i-ec2asg"/></svg></li>
+                <li class="tech-mini-item" role="img" aria-label="Elastic Load Balancing"><svg class="tech-mini-icon"><use href="icons.svg#i-elb"/></svg></li>
+                <li class="tech-mini-item" role="img" aria-label="AWS WAF"><svg class="tech-mini-icon"><use href="icons.svg#i-waf"/></svg></li>
+                <li class="tech-mini-item" role="img" aria-label="Amazon GuardDuty"><svg class="tech-mini-icon"><use href="icons.svg#i-guardduty"/></svg></li>
                 <li class="tech-mini-item" role="img" aria-label="Terraform"><img class="tech-mini-icon tech-mini-icon-brand" src="https://cdn.simpleicons.org/terraform/844FBA" alt="" loading="lazy" /></li>
-                <li class="tech-mini-item" role="img" aria-label="Cloudflare"><img class="tech-mini-icon tech-mini-icon-brand" src="https://cdn.simpleicons.org/cloudflare/F38020" alt="" loading="lazy" /></li>
                 <li class="tech-mini-item" role="img" aria-label="GitHub Actions"><img class="tech-mini-icon tech-mini-icon-brand" src="https://cdn.simpleicons.org/githubactions/2088FF" alt="" loading="lazy" /></li>
               </ul>
 
+              <ul class="proof">
+                <li class="proof-item"><span class="proof-value">24</span><span class="proof-label">Resources provisioned in Terraform</span></li>
+                <li class="proof-item"><span class="proof-value">0</span><span class="proof-label">Static AWS keys</span></li>
+                <li class="proof-item"><span class="proof-value">Auto</span><span class="proof-label">Rollback on a bad deploy</span></li>
+                <li class="proof-item"><span class="proof-value">Multi-AZ</span><span class="proof-label">Survives a zone outage</span></li>
+              </ul>
+
+              <div class="plain">
+                <span class="plain-label">In plain terms</span>
+                <p class="plain-text">If a data centre goes down or a release breaks something, the site stays up and the bad version is pulled back automatically, before it turns into an incident.</p>
+              </div>
+
+              <button type="button" class="diagram-trigger"
+                data-lightbox
+                data-lightbox-title="Production Ready AWS Infrastructure — Diagram"
+                data-lightbox-images='[
+                  {"src":"https://storage.googleapis.com/project-5c15975f-e002-4ccf-b67-videos/DIAGRAM%20IMAGE/Production%20ready.png","caption":"Production-ready AWS infrastructure architecture"}
+                ]'>
+                <svg class="diagram-trigger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+                View project diagram
+              </button>
+
               <p class="portfolio-hint">
-                The AWS projects on this page show what I build. This one shows how I run it:
-                monitored, budgeted, and provisioned entirely as code, on a second cloud.
+                Five disciplines in one repo: infrastructure as code, architecture, CI/CD,
+                security, and reliability engineering. Not a demo that only works once.
               </p>
 
               <div class="portfolio-actions">
-                <a class="btn btn-primary btn-sm" href="https://patriciolumbe.com" target="_blank" rel="noopener">Visit patriciolumbe.com (live)</a>
-                <a class="btn btn-ghost btn-sm" href="https://github.com/Lumbenlengo/patriciolumbe-site" target="_blank" rel="noopener">View on GitHub</a>
+                <a class="btn btn-primary btn-sm" href="https://github.com/Lumbenlengo/production-ready-aws-infrastructure" target="_blank" rel="noopener">View on GitHub</a>
               </div>
             </div>
           </article>
@@ -619,8 +735,8 @@
             <div class="case-study-index" aria-hidden="true">01</div>
             <div class="case-study-media">
               <a class="video-slot video-slot-has-cover" href="AI_OPS_CaseStudy/case-study-en.html">
-                <video class="video-slot-cover" autoplay muted playsinline preload="auto" aria-hidden="true">
-                  <source src="https://storage.googleapis.com/project-5c15975f-e002-4ccf-b67-videos/Projecto%20INGLES/Projecto%200.0%20%20Video%20em%20ingles.mp4" type="video/mp4">
+                <video class="video-slot-cover" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+                  <source src="https://storage.googleapis.com/project-5c15975f-e002-4ccf-b67-videos/Projecto%20INGLES/1.0%20Serverless%20AI%20for%203%20A.M.%20Incidents.mp4" type="video/mp4">
                 </video>
                 <span class="video-play" aria-hidden="true">
                   <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
@@ -801,8 +917,8 @@
               </svg>
             </div>
             <p class="cert-label cert-label-progress">In progress</p>
-            <h3 class="cert-name">Solutions Architect Professional</h3>
-            <p class="cert-desc">The professional level AWS architecture certification: complex organisations, large migrations and advanced design.</p>
+            <h3 class="cert-name">DevOps Professional</h3>
+            <p class="cert-desc">The professional level AWS certification for automating and managing CI/CD pipelines, infrastructure and operations at scale.</p>
           </li>
         </ul>
       </div>
@@ -877,11 +993,11 @@
             <span class="timeline-marker" aria-hidden="true"></span>
             <div>
               <p class="timeline-tag timeline-tag-next">Next</p>
-              <h3 class="item-title">AWS Solutions Architect Professional</h3>
+              <h3 class="item-title">AWS DevOps Professional</h3>
               <p class="prose">
                 Currently studying for it, alongside the next public build. The professional
-                level covers multi account organisations and large migrations, which is the
-                work I want to be doing next.
+                level covers advanced CI/CD automation, infrastructure orchestration at scale
+                and operational excellence, which is the work I want to be doing next.
               </p>
             </div>
           </li>
@@ -1072,6 +1188,7 @@
   </footer>
 
   <script src="JS/script.js" defer></script>
+  <script src="JS/lightbox.js" defer></script>
   <script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 </body>
 </html>

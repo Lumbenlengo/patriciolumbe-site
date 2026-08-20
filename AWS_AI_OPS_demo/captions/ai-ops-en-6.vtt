@@ -1,0 +1,268 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.440
+Uh application is working is
+
+2
+00:00:04.120 --> 00:00:04.640
+Healthy and uh
+
+3
+00:00:06.760 --> 00:00:11.720
+The idea was to build this
+application
+
+4
+00:00:12.760 --> 00:00:13.920
+Specifically for this
+
+5
+00:00:16.120 --> 00:00:18.800
+Project so the idea is
+simple I can safely introduce
+
+6
+00:00:18.800 --> 00:00:20.880
+Failures and test the entire
+
+7
+00:00:23.080 --> 00:00:26.040
+Monitoring so the remediation
+pipeline without uh also the
+
+8
+00:00:26.040 --> 00:00:30.000
+Remediation pipeline without
+affecting any wheel production
+system
+
+9
+00:00:31.680 --> 00:00:33.320
+So as you can see here it's
+
+10
+00:00:35.440 --> 00:00:37.760
+Running everything is
+healthy traffic is flowing
+
+11
+00:00:37.800 --> 00:00:39.960
+Normally and application is
+
+12
+00:00:43.680 --> 00:00:47.280
+Ready now comes the interesting
+part I'm going to intentionally
+
+13
+00:00:47.280 --> 00:00:51.040
+Break the service by clicking in
+this
+
+14
+00:00:53.720 --> 00:01:00.000
+Button when I click here so
+recent activity cows mod enabled
+
+15
+00:01:00.200 --> 00:01:00.200
+00000
+
+16
+00:01:30.040 --> 00:01:33.840
+1 2 3 4 5 6 7 8 9 8 9 1 0 0 0 0
+0
+
+17
+00:02:00.040 --> 00:02:05.360
+1 2 3 4 5 6 7 8 9 10 11 12 17 18
+19 20 21 27 28 29 30
+
+18
+00:02:24.720 --> 00:02:24.760
+1
+
+19
+00:02:31.440 --> 00:02:33.760
+So this is the mission
+control the dashboard that
+
+20
+00:02:33.880 --> 00:02:35.760
+I built manage operational
+
+21
+00:02:37.840 --> 00:02:39.440
+Incident so let's enter the
+
+22
+00:02:41.400 --> 00:02:46.080
+Console so here we can see the
+message arrived
+
+23
+00:02:48.040 --> 00:02:51.320
+AI observation death watch demo
+app
+
+24
+00:02:53.360 --> 00:02:56.040
+Else so he gave me two
+option approve and
+
+25
+00:02:57.760 --> 00:02:59.960
+Reject so the summary is the
+demo application in death
+
+26
+00:03:01.000 --> 00:03:07.000
+Is experiencing elevated error
+rates with eight errors
+
+27
+00:03:08.520 --> 00:03:13.920
+Detected in the last monitoring
+period exceeding except so
+
+28
+00:03:14.160 --> 00:03:17.400
+I have the option to approve and
+
+29
+00:03:18.600 --> 00:03:19.600
+Execute fix or
+
+30
+00:03:21.880 --> 00:03:23.520
+Reject now as you can see I have
+two
+
+31
+00:03:25.720 --> 00:03:29.960
+Option one is approve the
+remediation the other one is
+reject
+
+32
+00:03:30.000 --> 00:03:33.400
+To reject it so nothing happened
+
+33
+00:03:34.800 --> 00:03:39.480
+Automatically so I have to
+approve it to execute the
+
+34
+00:03:41.000 --> 00:03:42.560
+Fix so now I'm going to click
+
+35
+00:03:45.480 --> 00:03:48.240
+Here after the approval so we
+can see here
+
+36
+00:03:49.520 --> 00:03:53.880
+As succeeded the status is
+succeeded now it shows the
+
+37
+00:03:53.880 --> 00:03:57.040
+Started time when um
+
+38
+00:03:58.960 --> 00:03:59.840
+The workflow
+
+39
+00:04:00.000 --> 00:04:00.920
+Execution
+
+40
+00:04:03.280 --> 00:04:08.040
+Triggered so this resume is the
+pause Step Functions workflow and
+
+41
+00:04:08.040 --> 00:04:11.000
+Here we have the ended so it
+shows it's
+
+42
+00:04:16.000 --> 00:04:19.480
+Succeeded yes in this plot in
+this dashboard we have the cost
+
+43
+00:04:20.600 --> 00:04:24.720
+Reporter as we can see here uh
+my current cost reporter is
+
+44
+00:04:24.760 --> 00:04:25.200
+Seven
+
+45
+00:04:27.560 --> 00:04:29.960
+$7 so we have the services that
+we
+
+46
+00:04:30.040 --> 00:04:32.680
+If the cost
+
+47
+00:04:35.160 --> 00:04:40.480
+So the cost tab shows the actual
+AWS cost of running the
+
+48
+00:04:41.200 --> 00:04:45.200
+Platform it gives a clear view
+of what the solution costs in
+
+49
+00:04:45.200 --> 00:04:47.360
+Practice as we have here all the
+
+50
+00:04:49.200 --> 00:04:52.920
+Date so now we're going to test
+how assistant
+
+51
+00:04:55.160 --> 00:04:57.800
+Run book and ask him a
+
+52
+00:04:59.600 --> 00:05:00.000
+Question how do I
+
+53
+00:05:00.040 --> 00:05:04.440
+Call back a failed
+deployment so let's ask him this
+
+54
+00:05:04.440 --> 00:05:08.240
+Question and see what he'll
+say so as you can see
+
+55
+00:05:08.720 --> 00:05:12.360
+Here I made a I ask a
+question how do I roll back a
+
+56
+00:05:12.700 --> 00:05:17.220
+Deployment to the runbook
+assistant and here I have to
+
+57
+00:05:17.220 --> 00:05:22.820
+Answer how to hold back so we
+can see here all the
+answers so everything is
+

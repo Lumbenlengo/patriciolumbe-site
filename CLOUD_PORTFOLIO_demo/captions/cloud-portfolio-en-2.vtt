@@ -1,0 +1,311 @@
+WEBVTT
+
+1
+00:00:04.280 --> 00:00:07.400
+Hello everyone so welcome to my
+demo cloud portfolio
+
+2
+00:00:09.120 --> 00:00:12.080
+Platform so here I would like to
+explain a little bit about my
+
+3
+00:00:13.600 --> 00:00:15.160
+Project so I build this project
+around
+
+4
+00:00:17.200 --> 00:00:21.960
+Some important tools and
+services that I believe that are
+
+5
+00:00:21.960 --> 00:00:25.880
+Essential for real environment
+like
+
+6
+00:00:28.120 --> 00:00:30.000
+Security automation and high availability
+
+7
+00:00:30.840 --> 00:00:35.120
+So as we can see here on the
+diagram everything starts here
+
+8
+00:00:35.360 --> 00:00:35.400
+In
+
+9
+00:00:37.760 --> 00:00:40.840
+GitHub repository so I'll say
+this is the source of truth for
+
+10
+00:00:40.840 --> 00:00:42.880
+The application so where we can
+find the
+
+11
+00:00:46.800 --> 00:00:48.360
+Infrastructure that's good and then
+we have GitHub Actions
+
+12
+00:00:49.520 --> 00:00:52.640
+Workflow so why I chose
+GitHub Actions workflow I push a
+
+13
+00:00:52.640 --> 00:00:55.240
+Change to main
+branch GitHub Actions
+
+14
+00:00:55.440 --> 00:00:57.520
+Automatically starts deployment
+
+15
+00:00:59.640 --> 00:00:59.960
+Pipeline so is
+
+16
+00:01:00.000 --> 00:01:04.640
+Gives a consistent and
+repeatable process which is very
+
+17
+00:01:04.640 --> 00:01:09.160
+Good for an engineer because
+everything is automated with
+
+18
+00:01:09.600 --> 00:01:13.880
+GitHub Actions workflow and the
+deployment is the same every
+
+19
+00:01:15.240 --> 00:01:17.000
+Time there is less room for a
+human
+
+20
+00:01:19.080 --> 00:01:23.600
+Error and then we have here
+OIDC so there is no static key
+
+21
+00:01:23.600 --> 00:01:25.640
+For this particular
+
+22
+00:01:28.680 --> 00:01:29.960
+Platform and I took this
+decision
+
+23
+00:01:30.400 --> 00:01:34.720
+This probably one of the most
+important security decision that
+
+24
+00:01:35.440 --> 00:01:36.680
+I made for this
+
+25
+00:01:39.720 --> 00:01:41.720
+Architecture why because GitHub Actions always needs permission to
+
+26
+00:01:41.720 --> 00:01:46.400
+Deploy into google cloud a
+nd a common approach would be to
+
+27
+00:01:46.400 --> 00:01:49.480
+Create a service account key and
+store that key as a
+
+28
+00:01:51.960 --> 00:01:53.960
+Secret but this doesn't follow
+best
+
+29
+00:01:56.120 --> 00:01:59.960
+Practices instead of
+that I decided to use a workload
+identity
+
+30
+00:02:00.840 --> 00:02:05.920
+Federation as we can see
+here why I decide to to choose
+
+31
+00:02:05.920 --> 00:02:07.080
+The workflow identity
+
+32
+00:02:09.440 --> 00:02:11.040
+Federation because uh as
+I said GitHub and
+
+33
+00:02:11.680 --> 00:02:14.680
+Google cloud they need to
+establish a trust so GitHub can
+
+34
+00:02:14.680 --> 00:02:18.960
+Deploy into uh
+google cloud and the workflow
+
+35
+00:02:18.960 --> 00:02:22.760
+Receives a short-lived
+credential when it needs to
+
+36
+00:02:25.320 --> 00:02:30.000
+Deploy so with OIDC there is no
+static key
+
+37
+00:02:30.520 --> 00:02:34.800
+So there's no permanent cloud key sitting in GitHub waiting
+
+38
+00:02:34.800 --> 00:02:36.440
+To be legal or
+
+39
+00:02:38.600 --> 00:02:42.080
+Forgotten so the security
+perspective it's much stronger
+
+40
+00:02:42.080 --> 00:02:42.400
+With
+
+41
+00:02:44.840 --> 00:02:47.040
+OIDC and then here we have the
+IAM service
+
+42
+00:02:49.160 --> 00:02:51.600
+Account so why is important to
+have a IAM service
+
+43
+00:02:53.160 --> 00:02:56.880
+Account having a service
+IAM account it's so important
+
+44
+00:02:56.920 --> 00:02:59.680
+Because it follows the principle of least
+
+45
+00:03:01.400 --> 00:03:04.280
+privilege — it has only the
+permission required to deploy
+
+46
+00:03:04.280 --> 00:03:04.360
+The
+
+47
+00:03:06.760 --> 00:03:09.400
+Website so it's not an
+administrator account and it
+
+48
+00:03:09.400 --> 00:03:12.800
+Does not have unnecessary access
+to the rest of the
+
+49
+00:03:15.920 --> 00:03:21.040
+Environment so then we follow
+the deploy here so it deploys to
+
+50
+00:03:21.040 --> 00:03:22.080
+Firebase
+
+51
+00:03:24.920 --> 00:03:27.960
+Hosting and the the reason
+I chose this service is
+
+52
+00:03:29.240 --> 00:03:29.960
+Simple I don't want
+
+53
+00:03:30.760 --> 00:03:35.360
+The availability of the static
+website to depend on a single
+
+54
+00:03:35.360 --> 00:03:37.680
+Server that I have to manage
+
+55
+00:03:40.480 --> 00:03:43.240
+Myself and Firebase gives it to
+me because everything is
+
+56
+00:03:43.240 --> 00:03:47.720
+Completely automated and is a
+serverless
+
+57
+00:03:51.600 --> 00:03:53.640
+Service so Firebase uses
+google's global delivery
+
+58
+00:03:55.320 --> 00:03:57.480
+Infrastructure so the content
+also is completely
+
+59
+00:03:58.520 --> 00:03:59.960
+Distributed close to
+
+60
+00:04:01.800 --> 00:04:06.400
+User and https is handled
+automatically for a portfolio
+
+61
+00:04:08.160 --> 00:04:12.280
+And my static web
+application this gives me high
+
+62
+00:04:12.280 --> 00:04:18.040
+availability and global delivery
+which is everything that I need
+
+63
+00:04:18.440 --> 00:04:22.640
+For this platform and for my
+website so in the next video
+
+64
+00:04:22.840 --> 00:04:26.080
+I'll be explaining a little bit
+more about cloud dns and
+
+65
+00:04:28.400 --> 00:04:30.000
+Caa record thank you very much
+for watching this video
+

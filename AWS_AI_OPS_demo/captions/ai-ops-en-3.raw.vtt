@@ -1,0 +1,157 @@
+WEBVTT
+
+1
+00:00:03.640 --> 00:00:05.920
+now let's take a look on the
+
+2
+00:00:07.800 --> 00:00:11.720
+diagram let's walk for it left
+to right it starts
+
+3
+00:00:13.400 --> 00:00:17.240
+here the order is happy a demo
+workload running on
+
+4
+00:00:19.800 --> 00:00:23.920
+ecs farget cloud watch watches
+it constantly tracking a custom
+
+5
+00:00:23.920 --> 00:00:27.840
+metric i called errors
+when errors cause a
+
+6
+00:00:29.120 --> 00:00:29.880
+threshold cloud watch
+
+7
+00:00:30.040 --> 00:00:31.360
+and alarm state
+
+8
+00:00:33.840 --> 00:00:39.120
+change that goes for event
+bridge so think of it as a
+
+9
+00:00:39.920 --> 00:00:45.120
+aws event router which starts
+the workflow in step function
+
+10
+00:00:45.640 --> 00:00:52.400
+which which is a aws tool for
+orchestrating multi-step process
+
+11
+00:00:52.400 --> 00:00:53.680
+with pauses built
+
+12
+00:00:56.040 --> 00:01:00.000
+in step function calls a lambda
+function
+
+13
+00:01:00.520 --> 00:01:04.640
+called anomaly
+analyzer it builds a constraint
+
+14
+00:01:04.640 --> 00:01:11.120
+point and sends it to cloud to
+ai cloud hosted for
+
+15
+00:01:14.240 --> 00:01:17.480
+bedrock cloud reads the alarm
+and comes back with root
+
+16
+00:01:19.720 --> 00:01:23.880
+cause urgency and recommended
+action but only from a list a
+
+17
+00:01:23.880 --> 00:01:25.840
+list of action i specifically
+
+18
+00:01:28.000 --> 00:01:29.880
+allow and here's important
+
+19
+00:01:30.040 --> 00:01:30.600
+on the way
+
+20
+00:01:33.960 --> 00:01:37.760
+here the model never picks its
+own target that comes from this
+
+21
+00:01:37.760 --> 00:01:42.400
+remediation map found a tally by
+telephone if an alarm isn't in
+
+22
+00:01:42.400 --> 00:01:47.560
+that map the system defaults to
+logging only it never guesses
+
+23
+00:01:47.560 --> 00:01:52.200
+which server to touch and also
+we have other two lender
+
+24
+00:01:53.000 --> 00:01:57.560
+function cost report run book
+assistant run book assistant
+
+25
+00:01:57.880 --> 00:01:59.960
+that answers operational
+question
+
+26
+00:02:00.000 --> 00:02:04.920
+using my own documentation as
+contest and course report that
+
+27
+00:02:04.920 --> 00:02:07.480
+gives me a daily plan
+english summary of
+
+28
+00:02:08.960 --> 00:02:10.440
+aws spend same pattern different
+
+29
+00:02:12.800 --> 00:02:16.200
+job the analysis goes to slack
+
+30
+00:02:18.680 --> 00:02:24.240
+alert then the workflow pauses
+completely at zero cost until a
+
+31
+00:02:24.240 --> 00:02:30.000
+human approves it on a dashboard
+i build called mission control
+
+32
+00:02:33.880 --> 00:02:37.240
+one london the remediator is
+allowed to actually touch
+
+33
+00:02:37.240 --> 00:02:52.240
+infrastructure
+

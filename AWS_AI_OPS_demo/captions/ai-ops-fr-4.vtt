@@ -1,0 +1,248 @@
+WEBVTT
+
+1
+00:00:04.680 --> 00:00:10.120
+Maintenant passons mission
+contrôle les tableaux de bord
+
+2
+00:00:10.120 --> 00:00:13.000
+Que j'ai développé pour gérer
+les incidents
+
+3
+00:00:14.120 --> 00:00:18.760
+On entre ici et là comme on peut
+voir par comme je fais ça des
+
+4
+00:00:18.760 --> 00:00:22.160
+Fois c'est pour cela il y a des
+messages mais généralement il y
+
+5
+00:00:22.160 --> 00:00:26.760
+A qu'une seule ici j'ai réussi
+j'ai réussi un message
+
+6
+00:00:27.920 --> 00:00:29.960
+Comme on peut voir il y a toutes
+les informations
+
+7
+00:00:30.000 --> 00:00:34.680
+De l'incident ils sont réunis
+ici et je peux simplement
+
+8
+00:00:34.720 --> 00:00:39.040
+Approuver ou rejeter la
+rémédiation ici il explique
+
+9
+00:00:39.040 --> 00:00:40.160
+Qu'est-ce qui s'est passé avec
+
+10
+00:00:42.480 --> 00:00:45.320
+L'application euh si
+j'approuve il va exécuter et il
+
+11
+00:00:45.320 --> 00:00:46.440
+Va résoudre le
+
+12
+00:00:48.520 --> 00:00:52.240
+Problème et ici on a les
+incidents Ça ce sont les tous
+
+13
+00:00:52.240 --> 00:00:54.760
+Les incidents qui se sont passés
+avec euh mon
+
+14
+00:00:57.200 --> 00:00:59.960
+Application puis euh et ceux qui
+sont en train de faire
+
+15
+00:01:00.000 --> 00:01:01.440
+Euh c'est encore en
+
+16
+00:01:03.720 --> 00:01:06.840
+Fonctionnement et là il y a les
+assistants run book si jamais
+
+17
+00:01:06.840 --> 00:01:10.040
+J'ai une doute concernant
+l'application je peux faire
+
+18
+00:01:10.240 --> 00:01:12.320
+Ici je peux demander et il va me
+
+19
+00:01:14.560 --> 00:01:17.880
+Répondre et ici on a les cost
+report qui donnent les coûts
+
+20
+00:01:18.800 --> 00:01:23.840
+Total euh de mon application
+tout ce que j'ai fait par
+
+21
+00:01:23.840 --> 00:01:27.320
+Exemple ici on a et c'est
+tout il y a 3 euros et
+
+22
+00:01:28.400 --> 00:01:29.960
+J'ai une idée de tout tout
+
+23
+00:01:30.000 --> 00:01:32.040
+Tout ce que j'ai à
+
+24
+00:01:34.080 --> 00:01:37.680
+Payer et maintenant je vais
+approuver pour exécuter
+
+25
+00:01:39.840 --> 00:01:41.360
+La la fonction
+
+26
+00:01:45.320 --> 00:01:45.480
+Remediation j'approuve la
+
+27
+00:01:47.640 --> 00:01:50.760
+Remediation c'est uniquement
+après cette validation que le
+
+28
+00:01:50.760 --> 00:01:53.320
+Workflow redémarre
+automatiquement le
+
+29
+00:01:55.360 --> 00:01:59.120
+Service comme il y a des
+messages je vais l'aider et à
+chaque
+
+30
+00:02:00.040 --> 00:02:03.920
+Extention et a enregistré
+automatiquement avec son story
+
+31
+00:02:05.160 --> 00:02:08.400
+Complet ce qui facilite le suivi
+des et les
+
+32
+00:02:11.040 --> 00:02:12.160
+Audits et là je dois attendre
+quelques
+
+33
+00:02:14.960 --> 00:02:16.080
+Minutes et ici comme on peut
+voir c'est
+
+34
+00:02:18.520 --> 00:02:24.560
+Succeed donc euh c'est déjà
+enregistré dans le
+
+35
+00:02:26.080 --> 00:02:29.960
+Story Ça facilite le suivi de
+tous les incidents qui se
+passent
+
+36
+00:02:30.000 --> 00:02:34.280
+Avec mon application et comme
+j'ai dit
+
+37
+00:02:35.520 --> 00:02:39.600
+Assistante je je je et et c'est
+l'assistant opérationnel où je
+
+38
+00:02:39.600 --> 00:02:43.560
+Peux faire des questions euh
+comment effectuer un rollback
+
+39
+00:02:43.560 --> 00:02:48.240
+Après un déploiement et il va
+toujours me répondre euh en
+
+40
+00:02:48.240 --> 00:02:51.880
+Utilisant la documentation que
+j'ai également créée pour ce
+
+41
+00:02:51.880 --> 00:02:53.680
+Projet et ici on a le cost
+
+42
+00:02:55.840 --> 00:02:59.960
+Reporter le cost reporter qui
+montre les courriels et de la
+plate-forme
+
+43
+00:03:00.040 --> 00:03:01.040
+Plateforme sur
+
+44
+00:03:03.400 --> 00:03:07.960
+AWS comme vous pouvez le voir le
+coût est inférieur à 1 dollar
+
+45
+00:03:07.960 --> 00:03:13.760
+Par jour donc la plateforme est
+donc simple à maintenir mais
+
+46
+00:03:13.760 --> 00:03:15.600
+Aussi économique à
+
+47
+00:03:18.600 --> 00:03:21.520
+Exécuter en résumé la plateforme
+détecte automatiquement un
+
+48
+00:03:24.040 --> 00:03:29.720
+Incident l'analyse avec
+l'ia demande une validation
+humaine puis exécute la
+
+49
+00:03:30.040 --> 00:03:34.480
+Médiation avant de confirmer que
+l'application est de nouveau
+
+50
+00:03:36.600 --> 00:03:37.000
+Opérationnelle merci d'avoir
+
+51
+00:03:37.000 --> 00:03:52.000
+Regardé
+

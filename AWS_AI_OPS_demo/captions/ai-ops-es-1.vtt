@@ -1,0 +1,213 @@
+WEBVTT
+
+1
+00:00:02.240 --> 00:00:07.480
+Como podemos ver vamos a verlo
+de izquierda a
+
+2
+00:00:09.520 --> 00:00:12.160
+Derecha todo empieza aquí la
+orders
+
+3
+00:00:13.320 --> 00:00:17.360
+API una carga de trabajo de demo
+que corre a
+
+4
+00:00:20.280 --> 00:00:24.960
+ECS Fargate y CloudWatch la monitorea
+constantemente
+
+5
+00:00:25.680 --> 00:00:29.960
+Siguiendo una métrica
+personalizada que llamé errors
+
+6
+00:00:31.760 --> 00:00:34.000
+Cuando los errores superan un
+
+7
+00:00:35.920 --> 00:00:38.600
+Umbral CloudWatch dispara un
+cambio de estado de la
+
+8
+00:00:40.600 --> 00:00:41.240
+Alarma eso pasa por
+
+9
+00:00:43.840 --> 00:00:46.880
+EventBridge piénsalo como el
+enrutador de eventos de
+
+10
+00:00:48.200 --> 00:01:00.000
+AWS que arranca un workflow en
+Step Functions aquí
+
+11
+00:01:01.800 --> 00:01:08.680
+La eh la herramienta de AWS para
+orquestar procesos de varios
+
+12
+00:01:08.680 --> 00:01:14.040
+Pasos como pausas
+incorporadas Step Functions llama
+
+13
+00:01:14.040 --> 00:01:17.760
+Una función una función Lambda
+
+14
+00:01:19.000 --> 00:01:22.080
+Que que es llamada anomaly
+
+15
+00:01:24.560 --> 00:01:27.360
+Analyzer esta función es una
+función que yo creé
+
+16
+00:01:28.680 --> 00:01:29.160
+Y
+
+17
+00:01:31.160 --> 00:01:35.680
+Esta misma función de
+Lambda construye un print
+
+18
+00:01:35.840 --> 00:01:39.080
+Restringido y lo envía a
+
+19
+00:01:40.680 --> 00:01:42.560
+Cloud AI alojado a través de
+
+20
+00:01:45.120 --> 00:01:48.880
+Amazon Bedrock cloud le la
+alarma y devuelve la causa
+
+21
+00:01:50.080 --> 00:01:52.800
+Raíz la urgencia y una acción
+
+22
+00:01:54.280 --> 00:02:00.000
+Recomendada pero solo de una
+lista de acciones que yo permito
+explícitamente
+
+23
+00:02:00.400 --> 00:02:04.960
+Y aquí el límite importante el
+modelo nunca elige su propio
+
+24
+00:02:06.480 --> 00:02:08.560
+Objetivo eso viene de este
+remediación
+
+25
+00:02:09.720 --> 00:02:15.200
+Map gestionado completamente por
+Terraform si una alarma no está
+
+26
+00:02:15.200 --> 00:02:21.960
+En ese map el sistema por
+defecto solo reitera el
+
+27
+00:02:22.840 --> 00:02:25.280
+Incidente nunca adivina en qué
+servidor
+
+28
+00:02:27.680 --> 00:02:30.000
+Actúa es qué servidor actuar en
+este caso
+
+29
+00:02:31.640 --> 00:02:34.760
+Tenemos otros otras
+funciones otros dos
+
+30
+00:02:35.920 --> 00:02:37.520
+Lambdas vive en esta misma
+
+31
+00:02:39.560 --> 00:02:44.040
+Capa un asistente de
+runbook que responde preguntas
+
+32
+00:02:44.040 --> 00:02:47.760
+Operativas este como
+
+33
+00:02:50.840 --> 00:02:55.160
+Contexto eh y tenemos aquí
+también un cost reporter y es un
+
+34
+00:02:55.160 --> 00:02:59.920
+Reportero de costos que me da un
+resumen diario en el
+
+35
+00:03:00.040 --> 00:03:02.200
+Lenguaje sencillo del gasto en
+
+36
+00:03:04.440 --> 00:03:11.000
+AWS tiene son dos funciones que
+tiene el mismo patrón más más
+
+37
+00:03:11.000 --> 00:03:12.520
+Tiene tarea
+
+38
+00:03:14.880 --> 00:03:15.680
+Diferente el análisis
+
+39
+00:03:17.920 --> 00:03:18.400
+Va a
+
+40
+00:03:20.680 --> 00:03:24.240
+Slack alert luego el workflow se
+pausa completamente a costo cero
+
+41
+00:03:24.720 --> 00:03:29.720
+Hasta que un humano lo apruebe
+en panel que
+
+42
+00:03:30.040 --> 00:03:30.760
+Llamado
+
+43
+00:03:32.920 --> 00:03:36.160
+Mission control una vez
+aprobado solo una Lambda el
+
+44
+00:03:36.160 --> 00:03:40.680
+Remediador tiene permiso para
+tocar realmente la
+
+45
+00:03:42.560 --> 00:03:43.840
+Infraestructura en el próximo
+video
+

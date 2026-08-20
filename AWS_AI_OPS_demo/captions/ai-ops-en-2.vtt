@@ -1,0 +1,271 @@
+WEBVTT
+
+1
+00:00:01.360 --> 00:00:03.840
+So that's why I decided to build
+this project the
+
+2
+00:00:06.880 --> 00:00:10.080
+AI ops serverless platform which
+the goal is to reduce the time
+
+3
+00:00:10.960 --> 00:00:15.720
+To the time to detect the
+problem so the AI explain in a
+
+4
+00:00:15.720 --> 00:00:20.560
+Plain English what caused this
+problem so the engineer doesn't
+
+5
+00:00:20.560 --> 00:00:25.920
+Have to go through logs to
+decide what happened and go
+
+6
+00:00:25.920 --> 00:00:29.960
+Through logs to figure out what
+happened and to decide how to
+
+7
+00:00:30.000 --> 00:00:33.760
+To fix the problem because the
+AI model for
+
+8
+00:00:36.040 --> 00:00:40.240
+Amazon Bedrock solves this problem
+so he detect and
+
+9
+00:00:40.240 --> 00:00:45.360
+Discover what caused the problem
+and send the message through a
+
+10
+00:00:46.840 --> 00:00:50.360
+Slack so the engineer received
+the message with the explanation
+
+11
+00:00:51.320 --> 00:00:57.040
+Where the AI explain everything
+that caused this this specific
+
+12
+00:00:58.240 --> 00:00:59.960
+Problem so this saved time for
+
+13
+00:01:00.640 --> 00:01:03.520
+We save a lot of time to the
+engineer
+
+14
+00:01:04.840 --> 00:01:08.160
+When they are normally is
+detected by
+
+15
+00:01:10.440 --> 00:01:13.880
+CloudWatch the event is rooted
+through is rooted to event
+
+16
+00:01:13.880 --> 00:01:19.240
+Bridge and Step Functions and
+AI model analyze the
+
+17
+00:01:20.240 --> 00:01:23.680
+Problem the AI model through
+Amazon Bedrock analyze the
+
+18
+00:01:23.680 --> 00:01:29.040
+Problem and send this resume to
+the engineer
+
+19
+00:01:30.400 --> 00:01:34.920
+So the goal of this platform is
+to reduce the time of
+
+20
+00:01:37.080 --> 00:01:40.560
+Detection so the platform has as
+mission to analyze the
+
+21
+00:01:42.240 --> 00:01:47.600
+Anomaly and after analyzing this
+anomaly make a resume of this
+
+22
+00:01:48.240 --> 00:01:51.920
+Anomaly what caused the
+problem and how to fix the
+
+23
+00:01:52.520 --> 00:01:57.360
+Problem and then send this
+resume to through Slack to the
+
+24
+00:01:59.040 --> 00:01:59.960
+Engineer so the engineer receive
+
+25
+00:02:00.040 --> 00:02:04.840
+Give the message and already
+knows what caused this
+
+26
+00:02:05.880 --> 00:02:09.600
+Problem so the engineer doesn't
+have to go full logs to know
+
+27
+00:02:09.600 --> 00:02:15.720
+What caused this problem so the
+goal is to reduce the time and
+
+28
+00:02:15.720 --> 00:02:21.680
+Also to give full control to the
+engineer to decide to decide if
+
+29
+00:02:22.000 --> 00:02:25.200
+The AI can solve this problem or
+
+30
+00:02:27.280 --> 00:02:29.960
+Not and the engineer will have
+two options to approve
+
+31
+00:02:30.320 --> 00:02:32.080
+Or to not approve the
+
+32
+00:02:34.480 --> 00:02:37.040
+AI remediation so if the
+engineer decide to approve the
+
+33
+00:02:37.360 --> 00:02:42.440
+The AI remediation the AI will
+solve the problem in a question
+
+34
+00:02:42.440 --> 00:02:46.600
+Of minutes so if the engineer
+decide to not approve the
+
+35
+00:02:48.560 --> 00:02:50.360
+AI remediation so he can decline
+this
+
+36
+00:02:53.000 --> 00:03:00.000
+Proposition for this
+project I chose many
+AWS services like CloudWatch
+
+37
+00:03:00.000 --> 00:03:04.520
+Is the one who detected
+problem and the event is rooted
+
+38
+00:03:04.880 --> 00:03:07.760
+Through EventBridge and step
+
+39
+00:03:09.840 --> 00:03:13.440
+Function and after that the
+problem as I said is analyzed by
+
+40
+00:03:13.920 --> 00:03:17.320
+AI model through
+Amazon Bedrock that make the
+
+41
+00:03:17.320 --> 00:03:21.080
+Analyze and detect the real
+problem and also for
+
+42
+00:03:22.240 --> 00:03:27.360
+That I created four Lambda
+function that one of these
+
+43
+00:03:27.360 --> 00:03:29.960
+Function is the remediation
+function with
+
+44
+00:03:30.040 --> 00:03:34.440
+Which the mission is to solve
+the problem and many others
+
+45
+00:03:34.720 --> 00:03:39.240
+Function also like the runbook
+assistant which is mission is to
+
+46
+00:03:39.240 --> 00:03:43.440
+Answer the question if the
+engineer has any question on or
+
+47
+00:03:43.440 --> 00:03:49.080
+Doubt about the so the aim of
+this project is to help engineer
+
+48
+00:03:49.080 --> 00:03:53.640
+To understand and resolve the
+problems and anomalies in
+
+49
+00:03:53.640 --> 00:03:57.960
+Production in a question of
+minutes so they can
+
+50
+00:03:59.080 --> 00:03:59.960
+Solve this problem
+
+51
+00:04:00.040 --> 00:04:07.560
+Them fast and also maintaining
+the all control of any change
+
+52
+00:04:07.600 --> 00:04:08.520
+That happen in the
+
+53
+00:04:10.720 --> 00:04:12.760
+Infrastructure so thank you for
+watching in the next
+
+54
+00:04:13.320 --> 00:04:17.200
+Video I'll be explaining more
+about the services that I chose
+
+55
+00:04:17.200 --> 00:04:30.000
+And why I chose each
+service thank you very much
+

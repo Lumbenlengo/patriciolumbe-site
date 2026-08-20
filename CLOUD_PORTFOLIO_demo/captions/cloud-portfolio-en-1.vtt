@@ -1,0 +1,198 @@
+WEBVTT
+
+1
+00:00:02.960 --> 00:00:05.200
+Hello everyone my name is pa
+tricio lumbe I'm a cloud
+
+2
+00:00:06.200 --> 00:00:08.400
+Engineer I work with
+AWS cloud and
+
+3
+00:00:09.800 --> 00:00:12.120
+Google cloud and today I would
+love to share with you my new
+
+4
+00:00:13.880 --> 00:00:17.360
+Project so the idea behind this
+project was to build my
+
+5
+00:00:18.640 --> 00:00:20.200
+Website so I wanted my website
+to be
+
+6
+00:00:22.320 --> 00:00:25.480
+Secure fast and shipped
+one and also I wanted it to be
+
+7
+00:00:25.480 --> 00:00:30.000
+Scalable and resilient if it
+ever needs so
+
+8
+00:00:30.120 --> 00:00:33.600
+So that's why I chose
+google cloud specifically
+
+9
+00:00:36.160 --> 00:00:38.880
+Firebase so Firebase it makes a
+huge difference in this project
+
+10
+00:00:39.320 --> 00:00:44.240
+Because Firebase it serves my
+website through a global network
+
+11
+00:00:44.720 --> 00:00:49.920
+From many servers all over the
+world which makes my website
+
+12
+00:00:50.280 --> 00:00:53.400
+Load fast and also it's
+
+13
+00:00:55.160 --> 00:00:59.960
+Scalable and it comes with it's
+comes with security built-in
+like https and
+
+14
+00:01:00.000 --> 00:01:01.200
+Many other security
+
+15
+00:01:03.840 --> 00:01:06.480
+Tools and all of these in a very
+low
+
+16
+00:01:09.560 --> 00:01:10.800
+Cost for infrastructure for
+infrastructure for this
+
+17
+00:01:11.720 --> 00:01:12.360
+Project I chose
+
+18
+00:01:15.120 --> 00:01:18.320
+Terraform why because Terraform is
+a reusable code and simple to
+
+19
+00:01:19.520 --> 00:01:24.240
+Use imagine if I lose tomorrow
+all the setup that I applied in
+
+20
+00:01:24.240 --> 00:01:24.520
+This
+
+21
+00:01:27.320 --> 00:01:29.600
+Project with Terraform I can
+rebuild my
+
+22
+00:01:30.000 --> 00:01:33.840
+My infrastructure from scratch
+in a question of
+
+23
+00:01:34.920 --> 00:01:38.760
+Minutes so I can review this
+project from minute this is a
+
+24
+00:01:38.760 --> 00:01:43.400
+Huge advantage that's why
+I chose Terraform I can do all
+
+25
+00:01:43.400 --> 00:01:47.720
+This review in a question of
+minute
+
+26
+00:01:48.920 --> 00:01:51.360
+By running a couple few
+
+27
+00:01:53.040 --> 00:01:56.600
+Comments and for
+deployment I chose git up
+
+28
+00:01:58.440 --> 00:02:00.000
+Action so why git up
+action because
+
+29
+00:02:00.000 --> 00:02:03.400
+Everything is
+automated if I apply any change
+
+30
+00:02:03.400 --> 00:02:08.200
+In my on my website so the
+update is made in a question of
+
+31
+00:02:09.120 --> 00:02:13.280
+Minutes it's also very quick and
+it doesn't need any manual setup
+
+32
+00:02:13.280 --> 00:02:18.200
+With git up action and on top of
+that I added monitoring tools
+
+33
+00:02:18.560 --> 00:02:18.800
+And
+
+34
+00:02:21.120 --> 00:02:23.880
+Alerts with monitoring I can
+monitor my website if anything
+
+35
+00:02:23.880 --> 00:02:29.960
+Goes wrong with my website on
+cloud I will be notified for a
+message
+
+36
+00:02:30.760 --> 00:02:34.520
+And I'll figure out what is what
+happened with my website and
+
+37
+00:02:34.640 --> 00:02:38.600
+I'll solve this problem before
+anyone else doubts so there is
+
+38
+00:02:38.600 --> 00:02:41.440
+Many other tools that I applied
+in this project that I would
+
+39
+00:02:41.440 --> 00:02:44.640
+Like to share with you in the
+next video and
+
+40
+00:02:45.680 --> 00:03:00.000
+Thank you for watching see you
+in the next video
+

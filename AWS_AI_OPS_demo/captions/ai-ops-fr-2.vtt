@@ -1,0 +1,263 @@
+WEBVTT
+
+1
+00:00:03.880 --> 00:00:10.320
+Bon là comme vous pouvez le voir
+tout cette infrastructure est
+
+2
+00:00:10.320 --> 00:00:14.960
+Défini avec Terraform donc un
+infrastructure à
+
+3
+00:00:16.480 --> 00:00:21.320
+Scott on a ici tous les
+fichiers on a le fichier app
+
+4
+00:00:21.360 --> 00:00:27.040
+Avec Docker file on a aussi les
+fonctions qui sont qui
+
+5
+00:00:27.040 --> 00:00:29.960
+Fonctionnent avec Python tout ce
+
+6
+00:00:30.080 --> 00:00:35.720
+Ce sont des fonctions
+Lambda et ici en bas on a les
+
+7
+00:00:37.440 --> 00:00:41.000
+Tests et ici on a
+Terraform donc il n'y a pas eu
+
+8
+00:00:41.000 --> 00:00:44.040
+Des configurations manuelles
+dans la console
+
+9
+00:00:45.160 --> 00:00:47.720
+AWS si je devais tout recréer
+demain il me suffirait de
+
+10
+00:00:47.720 --> 00:00:53.080
+Relancer les codes donc là j'ai
+utilisé Terraform pour créer ce
+
+11
+00:00:55.880 --> 00:01:00.000
+Projet et maintenant commençons
+par vérifier que l'application
+fonctionne correctement
+
+12
+00:01:01.080 --> 00:01:03.680
+En réalisant en réalisant ce
+test
+
+13
+00:01:05.240 --> 00:01:08.400
+Là je vais appliquer cette
+commande au terminal pour voir
+
+14
+00:01:08.400 --> 00:01:09.200
+Si l'application
+
+15
+00:01:11.320 --> 00:01:14.360
+Fonctionne comme on peut voir
+les stati et elfi le service
+
+16
+00:01:16.600 --> 00:01:19.920
+Orders API donc là ce qui montre
+que l'application travaille
+
+17
+00:01:21.960 --> 00:01:23.560
+Bien vous rappelez que j'ai déjà
+fait le
+
+18
+00:01:26.120 --> 00:01:30.000
+Deployment maintenant l'application
+se trouve actuellement sur ews
+
+19
+00:01:31.160 --> 00:01:32.200
+J'ai fait ça par
+
+20
+00:01:34.440 --> 00:01:36.760
+Gitup action j'ai utilisé
+gitup j'ai fait le
+
+21
+00:01:38.200 --> 00:01:42.640
+Deployment donc là maintenant je
+vais comme on vient de vérifier
+
+22
+00:01:42.640 --> 00:01:46.720
+Que l'application fonctionne
+bien son état est
+
+23
+00:01:48.960 --> 00:01:52.400
+Elfi pour tester notre
+projet notre
+
+24
+00:01:53.880 --> 00:01:56.840
+AI notre intelligence
+artificielle je vais
+
+25
+00:01:57.280 --> 00:01:59.960
+Volontairement provoquer une
+panne pour montrer
+
+26
+00:02:00.040 --> 00:02:03.040
+Comment toute la plateforme
+réagit
+
+27
+00:02:05.240 --> 00:02:07.720
+Automatiquement pour cela je
+dois ouvrir les dashboards
+
+28
+00:02:09.760 --> 00:02:11.800
+AWS donc maintenant je pars dans
+mon compte de
+
+29
+00:02:14.160 --> 00:02:17.360
+AWS et de là je vais ouvrir
+l'application que j'ai créée
+
+30
+00:02:17.400 --> 00:02:18.240
+Pour cette
+
+31
+00:02:25.320 --> 00:02:30.000
+Plateforme voilà actuellement nous
+sommes AWS dans mon compte de
+AWS
+
+32
+00:02:30.720 --> 00:02:32.760
+Et ici comme on peut voir nous
+sommes dans
+
+33
+00:02:35.320 --> 00:02:35.760
+Amazon EC2 (Elastic Compute Cloud) ici
+
+34
+00:02:37.920 --> 00:02:38.960
+Tout et là on va chercher les
+
+35
+00:02:41.120 --> 00:02:41.800
+Alb qui est le load
+
+36
+00:02:45.280 --> 00:02:47.840
+Balancer dans notre load
+balancer on va trouver
+
+37
+00:02:50.080 --> 00:02:53.200
+Les liens pour entrer
+
+38
+00:02:54.320 --> 00:03:00.000
+Dans l'applicatif que j'ai créé
+AI observe ici
+
+39
+00:03:01.960 --> 00:03:05.400
+Dit on va trouver le dns et je
+vais copier ce dns pour qu'on
+
+40
+00:03:05.400 --> 00:03:09.280
+Puisse entrer pour qu'on puisse
+accéder dans cet
+
+41
+00:03:16.480 --> 00:03:18.800
+Applicatif alors on va faire
+entrer notre
+
+42
+00:03:23.600 --> 00:03:24.400
+Dns pour accéder
+
+43
+00:03:27.200 --> 00:03:27.280
+À
+
+44
+00:03:29.760 --> 00:03:29.960
+L'appli ici quand
+
+45
+00:03:30.160 --> 00:03:32.680
+Comme on peut voir ça c'est
+l'application que j'ai créé pour
+
+46
+00:03:32.680 --> 00:03:32.920
+Cette
+
+47
+00:03:35.000 --> 00:03:38.400
+Projet et là je vais créer une
+panne ici je vais cliquer ici
+
+48
+00:03:38.400 --> 00:03:44.360
+Break this service un simple
+clic sur break this service et
+
+49
+00:03:44.360 --> 00:03:48.960
+L'application commence à générer
+des erreurs exactement comme
+
+50
+00:03:48.960 --> 00:03:51.960
+Lors d'une d'un d'un incident
+
+51
+00:03:54.080 --> 00:04:00.000
+Réel ici ça indique encore
+elfi dès que je dès que je
+clique ici break this service
+
+52
+00:04:05.160 --> 00:04:10.240
+Donc on imagine que ça peut être
+dans une application dans un
+
+53
+00:04:10.240 --> 00:04:14.320
+Service réel et là ça commence à
+générer des erreurs
+
+54
+00:04:15.640 --> 00:04:30.000
+Et maintenant je vais vérifier
+mon Slack pour voir si j'ai un
+reçu si j'ai reçu un message
+

@@ -1,0 +1,327 @@
+WEBVTT
+
+1
+00:00:05.320 --> 00:00:07.400
+Hello everyone welcome to my
+demo of cloud portfolio
+
+2
+00:00:08.680 --> 00:00:11.280
+Platform so here we already
+talked about the
+
+3
+00:00:14.920 --> 00:00:18.120
+Git repository git action we saw
+also the work load identity
+
+4
+00:00:18.120 --> 00:00:21.880
+Federation and IAM service
+account in Firebase hosting and
+
+5
+00:00:21.880 --> 00:00:23.840
+Now we're going to see the cloud
+
+6
+00:00:25.720 --> 00:00:26.400
+Dns manager
+
+7
+00:00:28.720 --> 00:00:29.960
+Some and why I implemented it
+
+8
+00:00:30.560 --> 00:00:34.360
+Dns secured here also it's
+enabled I enabled it for this
+
+9
+00:00:36.600 --> 00:00:42.040
+Platform so I decided to use the
+cloud dns with dns security
+
+10
+00:00:42.040 --> 00:00:45.560
+Enabled because adds a
+protection against
+
+11
+00:00:48.880 --> 00:00:52.560
+Dns tampering usually if you
+want to add layer of security on
+
+12
+00:00:52.560 --> 00:00:59.840
+Our website we have to add also
+a CAA record to explicitly
+define which
+
+13
+00:01:00.760 --> 00:01:04.560
+Certificate authorities are
+allowed to issue certificates
+
+14
+00:01:04.560 --> 00:01:07.080
+For domain so these are small
+
+15
+00:01:08.280 --> 00:01:14.080
+Controls but they are so
+important to reduce attacks that
+
+16
+00:01:14.080 --> 00:01:18.360
+We can we can perceive against
+our
+
+17
+00:01:19.600 --> 00:01:22.600
+Website so it's important to
+protect the integrity of our
+
+18
+00:01:24.600 --> 00:01:27.600
+Networking and also besides the
+implementation of the
+
+19
+00:01:29.600 --> 00:01:29.880
+CAA record we
+
+20
+00:01:30.040 --> 00:01:33.360
+Have on other side a
+storage cloud
+
+21
+00:01:35.080 --> 00:01:39.600
+Storage where we can find some
+videos
+
+22
+00:01:40.840 --> 00:01:45.160
+That are stored on
+google separated the the storage
+
+23
+00:01:45.160 --> 00:01:47.240
+In two buckets so we have a two
+
+24
+00:01:48.880 --> 00:01:53.600
+Buckets the first one contains a
+public video asset used by the
+
+25
+00:01:55.040 --> 00:01:59.960
+Website since those files don't
+need to stay the most expensive
+
+26
+00:02:00.000 --> 00:02:05.960
+Storage style forever I also use
+a life cycle policy to move all
+
+27
+00:02:05.960 --> 00:02:08.880
+The object to cheaper tier after
+19
+
+28
+00:02:10.720 --> 00:02:13.280
+Days so and the other bucket is
+the state
+
+29
+00:02:14.560 --> 00:02:18.520
+Bucket this one contains the
+Terraform state it's a private
+
+30
+00:02:18.520 --> 00:02:22.440
+Version and protected against
+accidental deletion so it cannot
+
+31
+00:02:22.440 --> 00:02:29.600
+Be deleted because it contains
+very important information about
+our project and setup
+
+32
+00:02:31.000 --> 00:02:34.680
+And then we have at the
+bottom the Terraform as we can
+
+33
+00:02:34.680 --> 00:02:35.520
+See here we have
+
+34
+00:02:37.640 --> 00:02:39.680
+Terraform here this is what ties
+the all architecture
+
+35
+00:02:40.840 --> 00:02:43.360
+Together I chose Terraform to be
+my
+
+36
+00:02:44.840 --> 00:02:47.160
+Code
+infrastructure so everything you
+
+37
+00:02:47.200 --> 00:02:49.960
+See on these diagram like
+
+38
+00:02:51.360 --> 00:02:51.800
+Am identity
+
+39
+00:02:56.720 --> 00:02:59.960
+Federation austin dns storage and
+many other tools I define
+
+40
+00:03:00.040 --> 00:03:02.400
+As a code and manage it through
+version
+
+41
+00:03:05.160 --> 00:03:07.960
+Control so so I'm depending on
+the sequence of manual I'm not
+
+42
+00:03:07.960 --> 00:03:11.880
+Depending on the sequence of
+manual clicks everything in this
+
+43
+00:03:11.880 --> 00:03:14.000
+Platform is
+automated it's completely
+
+44
+00:03:14.000 --> 00:03:14.960
+Automated in this
+
+45
+00:03:18.120 --> 00:03:21.040
+Platform and beside all of these
+services that we saw here we
+
+46
+00:03:21.040 --> 00:03:22.680
+Have also
+
+47
+00:03:25.520 --> 00:03:27.720
+Monitoring observability and
+alerting
+
+48
+00:03:29.520 --> 00:03:29.960
+Here so we can
+
+49
+00:03:30.000 --> 00:03:32.920
+Monitor our application so in
+this case is the
+
+50
+00:03:34.360 --> 00:03:39.680
+Platform so at the final I need
+I want to know when something up
+
+51
+00:03:39.680 --> 00:03:42.680
+Will goes wrong every 5 minutes
+
+52
+00:03:44.000 --> 00:03:50.200
+I can up time check verifies
+that the site is responding with
+
+53
+00:03:50.240 --> 00:03:54.640
+Up time check and also I have
+the alert policy and
+
+54
+00:03:54.640 --> 00:03:59.840
+Notification channel email that
+I can receive any alert if
+something goes wrong with the
+
+55
+00:04:02.240 --> 00:04:06.240
+Platform so I have automated the
+deployment instead of manual
+
+56
+00:04:07.520 --> 00:04:11.560
+Releases short-lived
+credentials instead of permanent
+
+57
+00:04:11.600 --> 00:04:15.960
+Permanent keys I have a least privilege access instead of
+
+58
+00:04:16.000 --> 00:04:22.360
+Broad permission I have a globally delivered hosting instead of a
+
+59
+00:04:22.360 --> 00:04:28.960
+Single point of failure and a versioned state here
+
+60
+00:04:32.600 --> 00:04:36.560
+Versioned state instead of
+unmanaged
+
+61
+00:04:39.360 --> 00:04:42.000
+Infrastructure the reason that
+I chose this
+
+62
+00:04:42.760 --> 00:04:44.920
+Architecture I wanted something
+that will be secure by
+
+63
+00:04:45.680 --> 00:04:48.480
+Design easy to
+reproduce inexpensive to
+
+64
+00:04:49.200 --> 00:04:53.240
+Operate and very realistic
+enough to demonstrate how
+
+65
+00:04:53.400 --> 00:04:56.720
+I would approach infrastructure
+in a professional
+
+66
+00:04:58.280 --> 00:05:00.000
+Environment so thank you very
+much for watching
+
+67
+00:05:00.160 --> 00:05:02.080
+This demo see you in the next
+
+68
+00:05:02.080 --> 00:05:17.080
+Week thank you
+

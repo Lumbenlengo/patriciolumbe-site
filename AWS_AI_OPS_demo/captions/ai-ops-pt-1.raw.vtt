@@ -1,0 +1,201 @@
+WEBVTT
+
+1
+00:00:09.080 --> 00:00:13.160
+olá aqui temos o nosso
+diagrama vamos ver o vamos ver o
+
+2
+00:00:13.160 --> 00:00:17.760
+diagrama da esquerda para a
+direita tudo começa aqui no
+
+3
+00:00:19.160 --> 00:00:22.000
+order happy uma carga de
+trabalho demo a correr no
+
+4
+00:00:24.320 --> 00:00:29.960
+ss farqet e aqui temos o
+cloud watch monitor monitoriza
+constantemente seguindo
+
+5
+00:00:30.000 --> 00:00:32.640
+uma métrica personalizada que
+chamei de
+
+6
+00:00:34.800 --> 00:00:37.400
+errors e estes errors ou
+seja quando os errors
+
+7
+00:00:37.400 --> 00:00:40.680
+ultrapassam um limite ah o
+
+8
+00:00:42.160 --> 00:00:45.720
+cloud watch dispara uma mudança
+de estado do alarme isso passa
+
+9
+00:00:45.720 --> 00:00:50.720
+para event bridge pensa nisto
+como um roteador de eventos da
+
+10
+00:00:52.160 --> 00:00:56.040
+aws que arranca um workflow no
+step function ferramenta da
+
+11
+00:00:56.920 --> 00:00:59.960
+aws para orquestrar processos
+com várias etapas
+
+12
+00:01:00.720 --> 00:01:01.680
+com pausas
+
+13
+00:01:04.080 --> 00:01:09.720
+incorporadas o step function
+chama uma função lambda chamada
+
+14
+00:01:09.760 --> 00:01:16.360
+anomaly analyzer ela constrói um
+ponto restrito e envia o a
+
+15
+00:01:18.120 --> 00:01:19.720
+cloud ai hospedada através do
+
+16
+00:01:22.000 --> 00:01:25.560
+amazon bedrock o cloud lê o
+alarme e devolve a causa
+
+17
+00:01:26.680 --> 00:01:30.000
+raiz urgência e uma ação
+recomendada mas
+
+18
+00:01:30.280 --> 00:01:33.880
+só a partir de uma lista de
+ações que eu permito
+
+19
+00:01:34.720 --> 00:01:39.320
+explicitamente ou seja permitted
+action only e aqui está a
+
+20
+00:01:39.320 --> 00:01:42.880
+fronteira importante o modelo
+nunca escolhe seu próprio
+
+21
+00:01:43.200 --> 00:01:46.120
+alvo isso vem desta remediação
+
+22
+00:01:48.560 --> 00:01:52.600
+map gerida inteiramente pelo
+terraform se um alarme não
+
+23
+00:01:52.600 --> 00:01:56.720
+estiver nesse map o sistema por
+padrão só registra
+
+24
+00:01:57.440 --> 00:01:59.960
+incidente nunca adivinha em que
+servidor
+
+25
+00:02:00.040 --> 00:02:04.000
+dor mexe e por baixo temos
+outras funções como o cost
+
+26
+00:02:04.000 --> 00:02:07.240
+reporter em run assistant run
+book
+
+27
+00:02:08.840 --> 00:02:13.000
+assistant que é o assistente de
+run books que responde perguntas
+
+28
+00:02:13.040 --> 00:02:16.560
+operacionais usando a minha
+própria documentação como
+
+29
+00:02:16.560 --> 00:02:22.480
+contexto e um relator de custos
+que me dá um resumo diário em
+
+30
+00:02:22.480 --> 00:02:25.120
+linguagem simples dos gastos na
+
+31
+00:02:28.240 --> 00:02:29.960
+aws mesmo as duas funções têm
+estão
+
+32
+00:02:30.280 --> 00:02:32.680
+o mesmo padrão mas tem tarefas
+
+33
+00:02:35.280 --> 00:02:38.960
+diferente e depois disso temos
+depois o processo passa para
+
+34
+00:02:41.400 --> 00:02:44.840
+slack alerta ou seja o análise
+segue para o slack depo
+
+35
+00:02:44.840 --> 00:02:48.040
+is o workflow pausa
+completamente a custo
+
+36
+00:02:49.160 --> 00:02:55.320
+zero até um um humano ou
+engenheiro aprovar no painel que
+
+37
+00:02:55.320 --> 00:02:56.800
+construí chamado
+
+38
+00:02:59.480 --> 00:02:59.960
+mission control de
+pois de aprovar
+
+39
+00:03:00.760 --> 00:03:07.520
+sou uma lambda sou uma lambda
+que eu a função remediator que
+
+40
+00:03:07.520 --> 00:03:11.400
+vai resolver o problema tem a
+permissão para realmente tocar
+na
+
+41
+00:03:11.400 --> 00:03:26.400
+infraestrutura
+

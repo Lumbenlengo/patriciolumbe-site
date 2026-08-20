@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud Portfolio Platform | Video Walkthrough | Patricio Lumbe</title>
+  <meta name="description" content="Cloud Portfolio Platform video walkthroughs: a Google Cloud project running Firebase Hosting, Terraform and automated deployments." />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="icon" type="image/svg+xml" href="../favicon-lt.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://storage.googleapis.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../CSS/01-foundations.css" />
+  <link rel="stylesheet" href="../CSS/02-sections.css" />
+  <link rel="stylesheet" href="../CSS/03-interface.css" />
+  <link rel="stylesheet" href="../CSS/04-lightbox.css" />
+  <link rel="stylesheet" href="../CSS/05-proof.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="aurora aurora-1" aria-hidden="true"></div>
+  <div class="aurora aurora-2" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="nav is-scrolled">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">PL<span>.dev</span></a>
+      <nav class="nav-menu" aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="../index.html#portfolio">&larr; Back to portfolio</a></li>
+        </ul>
+      </nav>
+      <p class="nav-status" aria-label="Availability">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        Open to remote work
+      </p>
+    </div>
+  </header>
+
+  <main id="main" class="vp-page section">
+    <div class="container">
+
+      <div class="vp-head">
+        <p class="eyebrow">Portfolio project · Video walkthroughs · English</p>
+        <h1 class="section-title">Cloud Portfolio <em>Platform</em></h1>
+        <p class="prose vp-lede">The website you are looking at right now is itself a Google Cloud project: Firebase Hosting, Cloud Storage, Secret Manager, budget alerts and an uptime check, all provisioned in Terraform and deployed by GitHub Actions. Watch how it's built and how it ships, step by step.</p>
+
+        <ul class="proof">
+          <li class="proof-item"><span class="proof-value">0</span><span class="proof-label">Service account keys stored</span></li>
+          <li class="proof-item"><span class="proof-value">5 min</span><span class="proof-label">Uptime check interval</span></li>
+          <li class="proof-item"><span class="proof-value">100%</span><span class="proof-label">Provisioned in Terraform</span></li>
+          <li class="proof-item"><span class="proof-value">2</span><span class="proof-label">Clouds, one workflow</span></li>
+        </ul>
+
+        <button type="button" class="diagram-trigger"
+          data-lightbox
+          data-lightbox-title="Cloud Portfolio Platform — architecture"
+          data-lightbox-images='[
+            {"src":"../Assets/diagrams/CLOUD_PORTFOLIO_PLATFORM_SVG.svg","caption":"Google Cloud architecture: Cloudflare, Firebase Hosting, Cloud Storage, Secret Manager, Cloud Monitoring"}
+          ]'>
+          <svg class="diagram-trigger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+          View project diagram
+        </button>
+      </div>
+
+      <section class="vp-list">
+        <article class="vp-item glass reveal">
+          <div class="vp-media">
+            <video controls playsinline preload="metadata" controlsList="nodownload" crossorigin="anonymous">
+              <source src="https://storage.googleapis.com/project-5c15975f-e002-4ccf-b67-videos/CLOUD%20PLATFORM%20WEB%20SITE/1.0-%20Secure%2C%20Fast%2C%20Cheap%20Website%20with%20Firebase.mp4" type="video/mp4">
+              <track kind="captions" src="captions/cloud-portfolio-en-1.vtt" srclang="en" label="English" default>
+            </video>
+          </div>
+          <div class="vp-body">
+            <p class="vp-num">01</p>
+            <h2 class="vp-title">Secure, Fast, Cheap Website with Firebase</h2>
+            <p class="vp-desc">Why Firebase Hosting on Google Cloud, and how the site stays fast, cheap and secure by default: global delivery, HTTPS out of the box, and a cost profile that stays predictable at this scale.</p>
+          </div>
+        </article>
+
+        <article class="vp-item glass reveal">
+          <div class="vp-media">
+            <video controls playsinline preload="metadata" controlsList="nodownload" crossorigin="anonymous">
+              <source src="https://storage.googleapis.com/project-5c15975f-e002-4ccf-b67-videos/CLOUD%20PLATFORM%20WEB%20SITE/2.0%20Secure%20Automated%20Deployment%20to%20Firebase%20Hosting.mp4" type="video/mp4">
+              <track kind="captions" src="captions/cloud-portfolio-en-2.vtt" srclang="en" label="English" default>
+            </video>
+          </div>
+          <div class="vp-body">
+            <p class="vp-num">02</p>
+            <h2 class="vp-title">Secure, Automated Deployment to Firebase Hosting</h2>
+            <p class="vp-desc">The deployment pipeline end to end: GitHub Actions authenticates through Workload Identity Federation, short lived tokens only, no service account keys ever stored, and every push ships automatically.</p>
+          </div>
+        </article>
+
+        <article class="vp-item glass reveal">
+          <div class="vp-media">
+            <video controls playsinline preload="metadata" controlsList="nodownload" crossorigin="anonymous">
+              <source src="https://storage.googleapis.com/project-5c15975f-e002-4ccf-b67-videos/CLOUD%20PLATFORM%20WEB%20SITE/3.0%20Secure%20Cloud%20Portfolio%20Platform%20Architecture%20Overview.mp4" type="video/mp4">
+              <track kind="captions" src="captions/cloud-portfolio-en-3.vtt" srclang="en" label="English" default>
+            </video>
+          </div>
+          <div class="vp-body">
+            <p class="vp-num">03</p>
+            <h2 class="vp-title">Secure Cloud Portfolio Platform: Architecture Overview</h2>
+            <p class="vp-desc">The full picture, over the real architecture diagram: Cloud Storage for media, secrets in Secret Manager, a five minute uptime check with alerting, and a monthly budget alert, everything defined in Terraform.</p>
+          </div>
+        </article>
+      </section>
+
+      <p class="section-foot">
+        Want the full technical breakdown?
+        <a class="link-mono" href="https://github.com/Lumbenlengo/patriciolumbe-site" target="_blank" rel="noopener">Read the code on GitHub &rarr;</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-text">&copy; <span id="year">2026</span> Patricio Lumbe &middot; designed and deployed as code</p>
+      <p class="availability">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        Available for remote projects
+      </p>
+    </div>
+  </footer>
+
+  <script src="../JS/script.js" defer></script>
+  <script src="../JS/lightbox.js" defer></script>
+</body>
+</html>
