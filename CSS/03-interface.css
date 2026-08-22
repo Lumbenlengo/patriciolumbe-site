@@ -330,7 +330,7 @@ img.ticker-icon { border-radius: 3px; background: #fff; padding: 2px; box-sizing
   background: var(--bg-elevated);
   aspect-ratio: 16 / 9;
 }
-.vp-media video {
+.vp-media video { object-fit: cover;
   width: 100%;
   height: 100%;
   display: block;
