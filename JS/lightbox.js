@@ -2,7 +2,7 @@
    lightbox.js — Patricio Lumbe portfolio
    Diagram viewer for every [data-lightbox] trigger.
 
-   Controls: zoom out / zoom in through fixed steps (40% → 150%),
+   Controls: zoom out / zoom in through fixed steps (40% → 250%),
    live percentage readout, reset, drag to pan when the image is
    bigger than the stage, arrow keys to move between images,
    Escape to close. Mouse wheel zooms, double click toggles.
@@ -11,7 +11,8 @@
 (function () {
   'use strict';
 
-  var STEPS = [0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5];
+  var STEPS = [0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5,
+               1.6, 1.7, 1.8, 1.9, 2.0, 2.1, 2.2, 2.3, 2.4, 2.5];
   var DEFAULT_STEP = 6; // 100%
 
   var lb, stage, img, thumbsWrap, titleEl, captionEl, levelEl, hintEl;

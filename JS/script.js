@@ -294,6 +294,32 @@
     });
   }
 
+  /* ── Caption position: nudge captions down slightly ──────
+     CSS (video::cue) only styles the text — color, font, size —
+     it cannot move the caption box within the frame. That is
+     controlled by the WebVTT cue's own "line" position, which
+     only JavaScript can set. Every cue gets line = 92 (92% down
+     the frame, snapToLines off) so captions sit a little lower
+     without running past the bottom edge. */
+  function lowerCaptionPosition(cue) {
+    try {
+      cue.snapToLines = false;
+      cue.line = 92;
+      cue.lineAlign = 'end';
+    } catch (err) { /* older browsers: silently keep default position */ }
+  }
+
+  document.querySelectorAll('video track[kind="captions"]').forEach((trackEl) => {
+    const apply = () => {
+      const tt = trackEl.track;
+      if (!tt || !tt.cues) return;
+      Array.prototype.forEach.call(tt.cues, lowerCaptionPosition);
+    };
+    trackEl.addEventListener('load', apply);
+    // Some browsers have already parsed the track by the time this runs
+    if (trackEl.track && trackEl.track.cues && trackEl.track.cues.length) apply();
+  });
+
   /* ── Contact form: Send opens the visitor's email app ── */
   /* The message is addressed to contact@patriciolumbe.com with a copy to the Gmail inbox. */
   const contactForm = document.getElementById('contact-form');

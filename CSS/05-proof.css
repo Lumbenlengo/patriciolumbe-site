@@ -118,8 +118,8 @@ video::cue {
   background: rgba(9, 14, 26, 0.82);
   color: #f1f5f9;
   font-family: var(--sans);
-  font-size: 0.95em;
-  line-height: 1.5;
+  font-size: 0.8em;
+  line-height: 1.4;
 }
 
 @media (max-width: 620px) {
